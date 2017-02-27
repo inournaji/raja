@@ -28,6 +28,7 @@ stylesheets[all][] = font-awesome/css/font-awesome.min.css
 stylesheets[all][] = bootstrap/css/bootstrap.min.css
 stylesheets[all][] = css/slick.css
 stylesheets[all][] = css/slick-theme.css
+stylesheets[all][] = css/nouislider.min.css
 stylesheets[all][] = css/style.css
 
 
