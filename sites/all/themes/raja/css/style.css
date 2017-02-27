@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+html, body{
+    font-family: 'Ubuntu', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    overflow:hidden;
+}
 
 /* SCROLL BAR */
 
@@ -13,25 +21,72 @@
 
 /* END SCROLL BAR */
 
-html, body{
-    font-family: 'Ubuntu', sans-serif !important;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #FAFAFA;
-    overflow:hidden;
+/* LOADER */
+
+.spinner {
+    position:absolute;
+    background-color:rgba(0,0,0,0.8);
+    width:100%;
+    height:100%;
+    text-align: center;
+    z-index:9999;
 }
+
+.spinner div {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    position:relative;
+    top:50%;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+      }
+}
+
+/* END LOADER */
+
 .scroll{
     overflow-y:auto;
 }
 #first-time{
     display: none;
 }
+.region-content{
+    min-height:1000px;
+}
+
+/* HOME PAGE BIG SLIDER */
+
 .big-slider{
     margin-top:-15px;
 }
 .big-slider .view-content{
-    /*box-shadow:0 0 10px 0px #ccc;*/
     margin-top:28px;
 }
 .slick-next{
@@ -41,6 +96,43 @@ html, body{
     z-index:1;
     margin-left:40px;
 }
+
+/* END HOME PAGE BIG SLIDER */
+
+/* HOME PAGE MINI SLIDER */
+
+.home-page-mini-slider{
+    padding:0;
+    margin-bottom:10px;
+    margin-top:-40px;
+}
+.home-page-mini-slider a{
+    text-decoration:none;
+}
+.home-page-mini-slider .view-content{
+    text-align:center;
+    margin: 10px 0;
+    padding:5px;
+    cursor: pointer;
+    background-color:#fff;
+    box-shadow:none;
+}
+.home-page-mini-slider .mob-img{
+    display:inline-block;
+    margin-top:15px;
+}
+.home-page-mini-slider .mob-title{
+    color:#555;
+    text-decoration:none;
+    font-size:25px;
+    line-height:3;
+    margin:10px 0;
+}
+
+/* END HOME PAGE MINI SLIDER */
+
+/* MOBILE PAGE GRID */
+
 .mobile-grid{
     text-align:center;
 }
@@ -88,9 +180,7 @@ html, body{
 }
 
 /* SAMSUNG */
-/*.mobile-grid .samsung-mobile{
-    box-shadow: 0 0 10px 1px #717dce;
-}*/
+
 .mobile-grid .samsung-mobile:hover,
 .mobile-grid .samsung-mobile:focus{
     box-shadow: 0 0 10px 1px #3b5999;
@@ -99,11 +189,8 @@ html, body{
     background-color:#3b5999;
 }
 
-
 /* SONY */
-/*.mobile-grid .sony-mobile{
-    box-shadow: 0 0 10px 1px #adadad;
-}*/
+
 .mobile-grid .sony-mobile:hover,
 .mobile-grid .sony-mobile:focus{
     box-shadow: 0 0 10px 1px #131418;
@@ -112,11 +199,8 @@ html, body{
     background-color:#131418;
 }
 
-
 /* HTC */
-/*.mobile-grid .htc-mobile{
-    box-shadow: 0 0 10px 1px #c6f760;
-}*/
+
 .mobile-grid .htc-mobile:hover,
 .mobile-grid .htc-mobile:focus{
     box-shadow: 0 0 10px 1px #09b83e;
@@ -125,11 +209,8 @@ html, body{
     background-color:#09b83e;
 }
 
-
 /* APPLE */
-/*.mobile-grid .apple-mobile{
-    box-shadow: 0 0 10px 1px #dedede;
-}*/
+
 .mobile-grid .apple-mobile:hover,
 .mobile-grid .apple-mobile:focus{
     box-shadow: 0 0 10px 1px #2c3e50;
@@ -137,7 +218,6 @@ html, body{
 .mobile-grid .apple-mobile .mobile-name{
     background-color:#2c3e50;
 }
-
 .mobile-grid .mob-spec{
     text-align:left;
 }
@@ -145,298 +225,7 @@ html, body{
     cursor:pointer;
 }
 
-/* SORT BUTTON */
-.view-sort{
-    margin:20px 0;
-}
-.view-sort .btn-filter-row{
-    display:inline-block;
-    margin-right:5px;
-}
-.view-sort .view-header, .view-sort .view-content{
-    display:inline-block;
-    margin-right:5px;
-}
-.view-sort a{
-    text-decoration:none;
-    cursor:pointer;
-    padding:10px 15px;
-}
-/* ALL BUTTON */
-.view-sort .btn-filter{
-    transition:all 0.2s ease-in-out;
-    background-color:#00695C;
-    border:1px solid #00695C;
-    color:#fff;
-}
-.view-sort .btn-filter:hover{
-    background-color:#fafafa;
-    color:#00695C;
-}
-/* APPLE */
-.view-sort .btn-apple{
-    background-color:#2c3e50;
-    border-color:#2c3e50;
-}
-.view-sort .btn-apple:hover{
-    background-color:#fafafa;
-    color:#2c3e50;
-}
-/* SONY */
-.view-sort .btn-sony{
-    background-color:#131418;
-    border-color:#131418;
-}
-.view-sort .btn-sony:hover{
-    background-color:#fafafa;
-    color:#131418;
-}
-/* SAMSUNG */
-.view-sort .btn-samsung{
-    background-color:#3b5999;
-    border-color:#3b5999;
-}
-.view-sort .btn-samsung:hover{
-    background-color:#fafafa;
-    color:#3b5999;
-}
-/* HTC */
-.view-sort .btn-htc{
-    background-color:#09b83e;
-    border-color:#09b83e;
-}
-.view-sort .btn-htc:hover{
-    background-color:#fafafa;
-    color:#09b83e;
-}
-.accessories .accessories-item{
-    background-color:#fff;
-    text-align:center;
-    border:1px solid #ccc;
-}
-.accessories .accessories-item a{
-    text-decoration:none;
-}
-.accessories .accessories-img{
-    display:inline-block;
-}
-.accessories .accessories-title{
-    font-size:15px;
-    color:#333;
-    text-align:left;
-    font-weight:bold;
-}
-.accessories .accessories-price{
-    font-size:17px;
-    color:#006fcc;
-    text-align:left;
-}
-
-.side-block{
-    width:100%;
-    background-color:#fff;
-    border:1px solid #ccc;
-    box-shadow:0 0 6px 0px #ccc;
-    height:250px;
-    position: relative;
-    margin:10px 0;
-    border-radius:5px;
-    overflow:hidden;
-}
-.side-block .image{
-    transition:all 0.2s ease-in-out;
-    height:210px;
-}
-.side-block:hover .image{
-    transform:scale(1.1);
-}
-.side-block .title{
-    position:absolute;
-    bottom:0;
-    height:40px;
-    width:100%;
-    text-align:center;
-    line-height:2;
-    font-size:18px;
-    font-weight:bold;
-    border-top:1px solid #ccc;
-}
-.side-block .title{
-    color:#555;
-    text-decoration:none;
-}
-.side-block.mobile .image{
-    background:url('side/mobile.png');
-    background-size:contain;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-.side-block.accessories .image{
-    background:url('side/accessories.jpg');
-    background-size:contain;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-.side-block.hardware .image{
-    background:url('side/hardware.jpg');
-    background-size:contain;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-.side-block.imei .image{
-    background:url('side/imei.png');
-    background-size:contain;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-/*footer*/
-#footer {
-    background: #000000;
-    padding: 10px 0 10px 0;
-    width:100%;
-    border-bottom-color: red;
-    color: #dff0e6;
-    text-align: center;
-}
-#footer p {
-    margin-top: 10px;
-}
-/*end-footer*/
-
-
-/* CONTACT FORM */
-
-.contact-form{
-    padding:15px;
-    border-radius:5px;
-}
-.contact-form input[type="text"], .contact-form textarea{
-    border:none !important;
-    box-shadow:none !important;
-    background-color:#FAFAFA;
-    outline:none !important;
-    border-radius:0;
-    margin-bottom:25px;
-    border-bottom:2px solid #2980b9 !important;
-    color:#2980b9;
-}
-.contact-form textarea{
-    max-height: 200px;
-    resize:none;
-    overflow:hidden;
-}
-.contact-form .grippie{
-    display:none !important;
-}
-
-#block-block-7{
-    margin-top:90px;
-    font-size:23px;
-}
-
-#block-block-7 i{
-    font-size:45px;
-    vertical-align:middle;
-    margin-right:5px;
-}
-
-/* END CONTACT FORM */
-
-.region-content{
-    min-height:1000px;
-}
-/*loader*/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
-
-
-.loader {
-    animation: loader 5s cubic-bezier(.8,0,.2,1) infinite;
-    height: 50px;
-    width: 51px;
-    position: absolute;
-    top:calc(50% - 20px);
-    left:calc(50% - 20px);
-}
-@keyframes loader {
-    90% { transform: rotate(0deg); }
-    100% { transform: rotate(180deg); }
-}
-#top {
-    animation: top 5s linear infinite;
-    border-top: 20px solid #fff;
-    border-right: 20px solid transparent;
-    border-left: 20px solid transparent;
-    height: 0px;
-    width: 1px;
-    transform-origin: 50% 100%;
-}
-@keyframes top {
-    90% { transform: scale(0); }
-    100% { transform: scale(0);}
-}
-#bottom {
-    animation: bottom 5s linear infinite;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid #fff;
-    border-left: 20px solid transparent;
-    height: 0px;
-    width: 1px;
-    transform: scale(0);
-    transform-origin: 50% 100%;
-}
-@keyframes bottom {
-    10% { transform: scale(0); }
-    90% { transform: scale(1); }
-    100% { transform: scale(1); }
-}
-#line {
-    animation: line 5s linear infinite;
-    border-left: 1px dotted #fff;
-    height: 0px;
-    width: 0px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-@keyframes line {
-    10% { height: 20px; }
-    100% { height: 20px; }
-}
-/*end-loader*/
-
-
-
-/* HOME PAGE MINI SLIDER */
-
-.home-page-mini-slider{
-    padding:0;
-    margin-bottom:10px;
-    margin-top:-40px;
-}
-.home-page-mini-slider a{
-    text-decoration:none;
-}
-.home-page-mini-slider .view-content{
-    text-align:center;
-    margin: 10px 0;
-    padding:5px;
-    cursor: pointer;
-    background-color:#fff;
-    box-shadow:none;
-}
-.home-page-mini-slider .mob-img{
-    display:inline-block;
-    margin-top:15px;
-}
-.home-page-mini-slider .mob-title{
-    color:#555;
-    text-decoration:none;
-    font-size:25px;
-    line-height:3;
-    margin:10px 0;
-}
-
-/* END HOME PAGE MINI SLIDER */
+/* END MOBILE PAGE GRID */
 
 /* SINGLE MOBILE PAGE */
 
@@ -486,50 +275,81 @@ html, body{
 
 /* END SINGLE MOBILE PAGE */
 
-/* LOADER */
+/* ACCESSORIES & HARDWARE */
 
-.spinner {
-    position:absolute;
-    background-color:rgba(0,0,0,0.8);
+.accessories .accessories-item{
+    background-color:#fff;
+    text-align:center;
+    border:1px solid #ccc;
+}
+.accessories .accessories-item a{
+    text-decoration:none;
+}
+.accessories .accessories-img{
+    display:inline-block;
+}
+.accessories .accessories-title{
+    font-size:15px;
+    color:#333;
+    text-align:left;
+    font-weight:bold;
+}
+.accessories .accessories-price{
+    font-size:17px;
+    color:#006fcc;
+    text-align:left;
+}
+
+/* END ACCESSORIES & HARDWARE */
+
+/* CONTACT FORM */
+
+.contact-form{
+    padding:15px;
+    border-radius:5px;
+}
+.contact-form input[type="text"], .contact-form textarea{
+    border:none !important;
+    box-shadow:none !important;
+    background-color:#FAFAFA;
+    outline:none !important;
+    border-radius:0;
+    margin-bottom:25px;
+    border-bottom:2px solid #2980b9 !important;
+    color:#2980b9;
+}
+.contact-form textarea{
+    max-height: 200px;
+    resize:none;
+    overflow:hidden;
+}
+.contact-form .grippie{
+    display:none !important;
+}
+#block-block-7{
+    margin-top:90px;
+    font-size:23px;
+}
+#block-block-7 i{
+    font-size:45px;
+    vertical-align:middle;
+    margin-right:5px;
+}
+
+/* END CONTACT FORM */
+
+/* FOOTER */
+
+#footer {
+    background: #000000;
+    padding: 10px 0 10px 0;
     width:100%;
-    height:100%;
+    border-bottom-color: red;
+    color: #dff0e6;
     text-align: center;
-    z-index:9999;
+}
+#footer p {
+    margin-top: 10px;
 }
 
-.spinner div {
-    width: 18px;
-    height: 18px;
-    background-color: #fff;
-    border-radius: 100%;
-    display: inline-block;
-    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    position:relative;
-    top:50%;
-}
-
-.spinner .bounce1 {
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-    -webkit-animation-delay: -0.16s;
-    animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-    0%, 80%, 100% { -webkit-transform: scale(0) }
-    40% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bouncedelay {
-    0%, 80%, 100% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    } 40% {
-          -webkit-transform: scale(1.0);
-          transform: scale(1.0);
-      }
-}
+/* END FOOTER */
