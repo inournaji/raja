@@ -1,194 +1,179 @@
 jQuery(document).ready(function() {
 
+  /* LOADER */
+
+    jQuery(window).load(function () {
+        jQuery(".spinner").fadeOut("slow") && jQuery('html, body').addClass('scroll');
+    });
 
   /* SLICK SLIDER */
 
 
   /* MULTI IMAGE INSIDE THE MODAL */
-  var mobile_img = ".mob-multi-img";
+    var mobile_img = ".mob-multi-img";
 
   /* BIG SLIDER */
-  var big_slider = ".big-slider > .view-content";
+    var big_slider = ".big-slider > .view-content";
 
 
-  jQuery(mobile_img).slick({
-    infinite: true,
-    autoplay: true,
-    arrows: false,
-    dots:true,
-    variableWidth:true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  });
+    jQuery(mobile_img).slick({
+        infinite: true,
+        autoplay: true,
+        arrows: false,
+        dots:true,
+        variableWidth:true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
 
-  jQuery(big_slider).slick({
-    fade: true,
-    cssEase: 'linear',
-    adaptiveHeight: true,
-    infinite: true,
-    slidesToShow: 1,
-    autoplay: true,
-    arrows: true,
-  });
+    jQuery(big_slider).slick({
+        fade: true,
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        arrows: true,
+    });
 
 
-  var mini_slider = ".home-page-mini-slider >  .view-content";
+    var mini_slider = ".home-page-mini-slider >  .view-content";
 
-  jQuery(mini_slider).slick({
-    cssEase: 'linear',
-    adaptiveHeight: true,
-    infinite: true,
-    slidesToShow: 1,
-    autoplay: true,
-    arrows: false,
-  });
+    jQuery(mini_slider).slick({
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        arrows: false,
+    });
 
   /* END SLICK SLIDER */
 
-  /* MOBILE PAGE FILTERS */
-
-  /* var $grid = jQuery('.mobile-grid .view-content').isotope({
-   // options
-   itemSelector: '.mobile-item',
-   layoutMode: 'fitRows',
-   getSortData: {
-   name: '.mobile-name'
-   }
-   });
-   */
-
-  /*jQuery('.btn-filter').on( 'click' , function() {
-   var filterValue = jQuery( this ).attr('data-filter');
-   var text = jQuery(this).html();
-   $grid.isotope({ filter: filterValue });
-   jQuery('.block-title').html(text);
-   });*/
-
-  /* END MOBILE PAGE FILTERS */
 
   /* MOBILE RANGE SLIDER */
 
-  if (location.pathname.split("/")[1] == "mobiles"){
+    if (location.pathname.split("/")[1] == "mobiles"){
 
-    /* RAM */
+      /* RAM */
 
-    var snapSlider = document.getElementById('slider-snap-ram');
+        var snapSlider = document.getElementById('slider-snap-ram');
 
-    noUiSlider.create(snapSlider, {
-      start: [ 1, 4 ],
-      snap: true,
-      connect: true,
-      range: {
-        'min': 1,
-        '10%': 2,
-        '20%': 3,
-        '30%': 4,
-        '40%': 5,
-        '50%': 6,
-        '60%': 7,
-        '70%': 8,
-        '80%': 9,
-        'max': 10
-      }
-    });
+        noUiSlider.create(snapSlider, {
+            start: [ 1, 4 ],
+            snap: true,
+            connect: true,
+            range: {
+                'min': 1,
+                '10%': 2,
+                '20%': 3,
+                '30%': 4,
+                '40%': 5,
+                '50%': 6,
+                '60%': 7,
+                '70%': 8,
+                '80%': 9,
+                'max': 10
+            }
+        });
 
-    var snapValuesRam = [
-      document.getElementById('edit-field-ram-value-min'),
-      document.getElementById('edit-field-ram-value-max')
-    ];
+        var snapValuesRam = [
+            document.getElementById('edit-field-ram-value-min'),
+            document.getElementById('edit-field-ram-value-max')
+        ];
 
-    snapSlider.noUiSlider.on('update', function( values, handle ) {
-      snapValuesRam[handle].value= values[handle];
-    });
+        snapSlider.noUiSlider.on('update', function( values, handle ) {
+            snapValuesRam[handle].value= values[handle];
+        });
 
-    /* END RAM */
+      /* END RAM */
 
 
-    /* SCREEN */
+      /* SCREEN */
 
-    var snapSlider = document.getElementById('slider-snap-screen');
+        var snapSlider = document.getElementById('slider-snap-screen');
 
-    noUiSlider.create(snapSlider, {
-      start: [ 1, 4 ],
-      snap: true,
-      connect: true,
-      range: {
-        'min': 1,
-        '10%': 1.5,
-        '20%': 2,
-        '30%': 2.5,
-        '40%': 3,
-        '50%': 3.5,
-        '60%': 4,
-        '70%': 4.5,
-        '80%': 5,
-        'max': 6
-      }
-    });
+        noUiSlider.create(snapSlider, {
+            start: [ 1, 4 ],
+            snap: true,
+            connect: true,
+            range: {
+                'min': 1,
+                '10%': 1.5,
+                '20%': 2,
+                '30%': 2.5,
+                '40%': 3,
+                '50%': 3.5,
+                '60%': 4,
+                '70%': 4.5,
+                '80%': 5,
+                'max': 6
+            }
+        });
 
-    var snapValuesScreen = [
-      document.getElementById('edit-field-screen-size-value-min'),
-      document.getElementById('edit-field-screen-size-value-max')
-    ];
+        var snapValuesScreen = [
+            document.getElementById('edit-field-screen-size-value-min'),
+            document.getElementById('edit-field-screen-size-value-max')
+        ];
 
-    snapSlider.noUiSlider.on('update', function( values, handle ) {
-      snapValuesScreen[handle].value= values[handle];
-    });
+        snapSlider.noUiSlider.on('update', function( values, handle ) {
+            snapValuesScreen[handle].value= values[handle];
+        });
 
-    /* END SCREEN */
+      /* END SCREEN */
 
-    /* PRICE */
+      /* PRICE */
 
-    var snapSlider = document.getElementById('slider-snap-price');
+        var snapSlider = document.getElementById('slider-snap-price');
 
-    noUiSlider.create(snapSlider, {
-      start: [ 10000, 30000 ],
-      snap: true,
-      connect: true,
-      range: {
-        'min': 10000,
-        '10%': 15000,
-        '20%': 20000,
-        '30%': 30000,
-        '40%': 50000,
-        '50%': 70000,
-        '60%': 100000,
-        '70%': 150000,
-        '80%': 200000,
-        'max': 250000
-      }
-    });
+        noUiSlider.create(snapSlider, {
+            start: [ 10000, 30000 ],
+            snap: true,
+            connect: true,
+            range: {
+                'min': 10000,
+                '10%': 15000,
+                '20%': 20000,
+                '30%': 30000,
+                '40%': 50000,
+                '50%': 70000,
+                '60%': 100000,
+                '70%': 150000,
+                '80%': 200000,
+                'max': 250000
+            }
+        });
 
-    var snapValuesPrice = [
-      document.getElementById('edit-field-price-value-min'),
-      document.getElementById('edit-field-price-value-max')
-    ];
+        var snapValuesPrice = [
+            document.getElementById('edit-field-price-value-min'),
+            document.getElementById('edit-field-price-value-max')
+        ];
 
-    snapSlider.noUiSlider.on('update', function( values, handle ) {
-      snapValuesPrice[handle].value= values[handle];
-    });
+        snapSlider.noUiSlider.on('update', function( values, handle ) {
+            snapValuesPrice[handle].value= values[handle];
+        });
 
-    /* END PRICE */
+      /* END PRICE */
 
-  }
+    }
 
   /* END MOBILE RANGE SLIDER */
 
