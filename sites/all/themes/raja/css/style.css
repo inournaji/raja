@@ -104,6 +104,43 @@ html, body{
     background: #fff;
     border-color: #000;
 }
+/* Range Slidbar */
+.noUi-handle:after {
+    left: 13px;
+}
+section#block-block-8 > div {
+    padding: 0;
+}
+.noUi-handle:after, .noUi-handle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 14px;
+    width: 1px;
+    background: #E8E7E6;
+    left: 10px;
+    top: 4px;
+}
+
+
+.noUi-horizontal .noUi-handle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: -9px;
+    box-shadow: none;
+}
+
+.noUi-connect {
+    background: #000;
+}
+
+.noUi-target {
+    height: 13px;
+    margin-top: 20px;
+    padding-left: 11px;
+}
+
 /* Modals */
 
 .modal-title {
@@ -241,7 +278,18 @@ body .label {
 /* END HOME PAGE MINI SLIDER */
 
 /* MOBILE PAGE GRID */
-
+div#edit-field-ram-value-wrapper, div#edit-field-price-value-wrapper, div#edit-field-screen-size-value-wrapper {
+    display: none;
+}
+section#block-views-mobile-grid-block {
+    margin-top: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.view-mobile-accessories {
+    margin-left: -8px;
+    margin-right: -8px;
+}
 .mobile-grid{
     text-align:center;
 }
