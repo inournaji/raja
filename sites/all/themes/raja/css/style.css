@@ -7,8 +7,16 @@ html, body{
     box-sizing: border-box;
     background-color: #FAFAFA;
     overflow:hidden;
+    font-size: 16px;
 }
 
+.view-empty {
+    min-height: 44vh;
+    line-height: 44vh;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
 /* SCROLL BAR */
 
 ::-webkit-scrollbar{width:10px;height:15px;}
@@ -81,6 +89,21 @@ html, body{
     border-color: #ccc;
 }
 
+.views-exposed-form .views-exposed-widget .form-submit {
+    padding: 8px 20px;
+    transition: all 0.2s linear;
+    background: #000;
+    border: 1px solid #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.views-exposed-form .views-exposed-widget .form-submit:hover {
+    color: #000;
+    background: #fff;
+    border-color: #000;
+}
 /* Modals */
 
 .modal-title {
@@ -163,9 +186,9 @@ body .label {
 #first-time{
     display: none;
 }
-.region-content{
-    min-height:1000px;
-}
+/*.region-content{*/
+    /*min-height:1000px;*/
+/*}*/
 
 /* HOME PAGE BIG SLIDER */
 
