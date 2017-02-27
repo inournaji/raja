@@ -100,14 +100,8 @@ jQuery(document).ready(function() {
             document.getElementById('edit-field-ram-value-max')
         ];
 
-        var divValuesRam = [
-            document.getElementById('ram-min-val'),
-            document.getElementById('ram-max-val')
-        ];
-
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesRam[handle].value= values[handle],
-            divValuesRam[handle].html= values[handle];
+            snapValuesRam[handle].value= values[handle];
         });
 
       /* END RAM */
