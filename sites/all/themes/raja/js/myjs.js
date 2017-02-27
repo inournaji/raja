@@ -97,17 +97,17 @@ jQuery(document).ready(function() {
 
         var snapValuesRam = [
             document.getElementById('edit-field-ram-value-min'),
-            document.getElementById('edit-field-ram-value-max'),
+            document.getElementById('edit-field-ram-value-max')
         ];
 
-        var divValueRam = [
+        var divValuesRam = [
             document.getElementById('ram-min-val'),
             document.getElementById('ram-max-val')
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesRam[handle].value= values[handle];
-            divValueRam[handle].html= values[handle];
+            snapValuesRam[handle].value= values[handle],
+            divValuesRam[handle].html= values[handle];
         });
 
       /* END RAM */
