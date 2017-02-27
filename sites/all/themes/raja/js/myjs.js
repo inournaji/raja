@@ -1,5 +1,10 @@
 jQuery(document).ready(function() {
 
+  /* LOADER */
+
+    jQuery(window).load(function () {
+        jQuery(".spinner").fadeOut("slow");
+    });
 
   /* SLICK SLIDER */
 
