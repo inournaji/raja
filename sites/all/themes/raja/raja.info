@@ -39,6 +39,7 @@ stylesheets[all][] = css/style.css
 scripts[] = 'bootstrap/js/bootstrap.min.js'
 scripts[] = 'js/slick.min.js'
 scripts[] = 'js/myjs.js'
+scripts[] = 'nouislider.min.js'
 ;scripts[] = 'bootstrap/js/affix.js'
 ;scripts[] = 'bootstrap/js/alert.js'
 ;scripts[] = 'bootstrap/js/button.js'
