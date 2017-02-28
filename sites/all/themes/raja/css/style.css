@@ -153,7 +153,48 @@ section#block-block-8 > div {
     margin-top: 20px;
     padding-left: 11px;
 }
+/* Header */
+header#navbar.navbar-inverse {
+    background: transparent;
+    border: none;
+    color: #fff;
+}
 
+header#navbar.navbar-inverse a.active, header#navbar.navbar-inverse a:hover {
+    background: transparent;
+    color: #000;
+    border-bottom: 3px solid #000;
+}
+
+
+header#navbar.navbar-inverse a.logo.navbar-btn.pull-left:hover, header#navbar.navbar-inverse a.name.navbar-brand:hover {
+    transform: scale(1.05, 1.05);
+    border: none;
+    border-bottom: none;
+}
+
+header#navbar.navbar-inverse a.name.navbar-brand {}
+
+header#navbar.navbar-inverse a {
+    /* font-size: 19px; */
+    transition: all 0.1s linear;
+}
+@media (min-width: 768px) {
+
+    header#navbar.navbar-inverse a.active ul.menu.nav.navbar-nav {
+        /* float: right; */
+    }
+
+    header#navbar.navbar-inverse nav {
+        float: right;
+    }
+
+    header#navbar.navbar-inverse a.logo.navbar-btn.pull-left, header#navbar.navbar-inverse a.name.navbar-brand {
+        margin-right: 11px;
+        transition: all 0.3s linear;
+    }
+}
+/* Header End */
 /* Modals */
 
 .modal-title {
@@ -196,14 +237,13 @@ section#block-block-8 > div {
 
 .accessories .modal-body > div:nth-child(2) {
     min-height: 20px;
-    position: relative;
 }
 
 .accessories .modal-body> div > ul {
     padding: 0;
     position: absolute;
     left: calc(70% + 15px);
-    bottom: 10px;
+    top: 10px;
     padding: 0 15px;
 }
 .modal-body span.label.label-info {
