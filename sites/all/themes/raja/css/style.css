@@ -499,7 +499,27 @@ section#block-views-mobile-grid-block {
 }
 
 /* END SINGLE MOBILE PAGE */
+/* Warranty page */
+.waranty-wrapper > div>div {
+    float: left;
+    margin-bottom: 30px;
+}
 
+.waranty-wrapper > div>div:first-child {
+    clear: left;
+    min-width: 25%;
+}
+
+.waranty-wrapper > div>div:last-child {
+    font-weight: bold;
+}
+
+.view.view-warranty-check- {
+    margin-bottom: 53px;
+    float: left;
+    width: 100%;
+}
+/* Warranty page End */
 /* ACCESSORIES & HARDWARE */
 
 .accessories .accessories-item{
