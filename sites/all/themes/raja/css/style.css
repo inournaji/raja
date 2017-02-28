@@ -6,7 +6,6 @@ html, body{
     padding: 0;
     box-sizing: border-box;
     background-color: #FAFAFA;
-    overflow:hidden;
     font-size: 16px;
 }
 
@@ -229,9 +228,6 @@ body .label {
 
 /* END LOADER */
 
-.scroll{
-    overflow-y:auto;
-}
 #first-time{
     display: none;
 }

@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
   /* LOADER */
 
     jQuery(window).load(function () {
-        jQuery(".spinner").fadeOut("slow") && jQuery('html, body').addClass('scroll');
+        jQuery(".spinner").fadeOut("slow");
     });
 
   /* SLICK SLIDER */
