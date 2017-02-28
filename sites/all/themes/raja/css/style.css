@@ -564,6 +564,29 @@ section#block-views-mobile-grid-block {
 
 /* END CONTACT FORM */
 
+/* SOCIAL BAR */
+
+.social-bar{
+    text-align:center;
+    margin-bottom:20px;
+}
+.social-bar a{
+    color:#fff;
+    text-transform:uppercase;
+    text-decoration:none;
+    background-color:#3b5999;
+    border:1px solid #3b5999;
+    padding:10px 20px;
+    font-weight:bold;
+    transition: all 0.2s linear;
+}
+.social-bar a:hover{
+    color:#3b5999;
+    background-color:#fff;
+}
+
+/* END SOCIAL BAR */
+
 /* FOOTER */
 
 #footer {
