@@ -93,7 +93,7 @@ html, body{
 .views-exposed-form .views-exposed-widget .form-submit {
     padding: 8px 20px;
     transition: all 0.2s linear;
-    background: #000;
+    background: #37474F;
     border: 1px solid #fff;
     font-size: 16px;
     font-weight: bold;
@@ -101,16 +101,16 @@ html, body{
 }
 
 .views-exposed-form .views-exposed-widget .form-submit:hover {
-    color: #000;
+    color: #37474F;
     background: #fff;
-    border-color: #000;
+    border-color: #37474F;
 }
 /* Tables */
 .table-bordered, th, td {
     background: #fff;
     text-align: center;
     border-collapse: collapse;
-    /* border-color: #000; */
+    /* border-color: #37474F; */
 }
 
 .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
@@ -145,7 +145,7 @@ section#block-block-8 > div {
 }
 
 .noUi-connect {
-    background: #000;
+    background: #37474F;
 }
 
 .noUi-target {
@@ -162,8 +162,8 @@ header#navbar.navbar-inverse {
 
 header#navbar.navbar-inverse a.active, header#navbar.navbar-inverse a:hover {
     background: transparent;
-    color: #000;
-    border-bottom: 3px solid #000;
+    color: #37474F;
+    border-bottom: 3px solid #37474F;
 }
 
 
@@ -592,7 +592,7 @@ section#block-views-mobile-grid-block {
     font-weight: bold;
     text-align: center;
     padding: 15px;
-    background: #000;
+    background: #37474F;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     color: #fff;
@@ -668,7 +668,7 @@ section#block-views-mobile-grid-block {
 /* FOOTER */
 
 #footer {
-    background: #000000;
+    background: #37474F;
     padding: 10px 0 10px 0;
     width:100%;
     border-bottom-color: red;
