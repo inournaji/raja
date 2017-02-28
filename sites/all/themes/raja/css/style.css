@@ -182,10 +182,29 @@ section#block-block-8 > div {
 .modal-body li {
     list-style-type: none;
     margin-top: 10px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 3px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 5px;
+    display: inline-block;
+    padding: 4px;
+}
+.accessories .modal-body > div:first-child {
+    width: 70%;
 }
 
-.modal-body ul {
+.accessories .modal-body > div:nth-child(2) {
+    min-height: 20px;
+    position: relative;
+}
+
+.accessories .modal-body> div > ul {
     padding: 0;
+    position: absolute;
+    left: calc(70% + 15px);
+    bottom: 10px;
+    padding: 0 15px;
 }
 
 .modal-body span.label.label-info {
