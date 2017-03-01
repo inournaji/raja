@@ -101,9 +101,9 @@ jQuery(document).ready(function() {
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesRam[handle].value= values[handle];
+            snapValuesRam[handle].value = values[handle];
             document.getElementById('ram-min-value').innerHTML = values[handle][0];
-            document.getElementById('ram-min-value').innerHTML = values[handle][1];
+            document.getElementById('ram-max-value').innerHTML = values[handle][1];
         });
 
       /* END RAM */
@@ -137,7 +137,9 @@ jQuery(document).ready(function() {
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesScreen[handle].value= values[handle];
+            snapValuesScreen[handle].value = values[handle];
+            document.getElementById('screen-min-value').innerHTML = values[handle][0];
+            document.getElementById('screen-max-value').innerHTML = values[handle][1];
         });
 
       /* END SCREEN */
@@ -170,7 +172,9 @@ jQuery(document).ready(function() {
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesPrice[handle].value= values[handle];
+            snapValuesPrice[handle].value = values[handle];
+            document.getElementById('price-min-value').innerHTML = values[handle][0];
+            document.getElementById('price-max-value').innerHTML = values[handle][1];
         });
 
       /* END PRICE */
