@@ -102,10 +102,9 @@ jQuery(document).ready(function() {
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
             snapValuesRam[handle].value = values[handle];
+            snapValuesRam[handle].change();
             document.getElementById('ram-min-value').innerHTML = document.getElementById('edit-field-ram-value-min').value;
             document.getElementById('ram-max-value').innerHTML = document.getElementById('edit-field-ram-value-max').value;
-            document.getElementById('edit-field-ram-value-min').trigger('change');
-            document.getElementById('edit-field-ram-value-max').trigger('change');
         });
 
       /* END RAM */
