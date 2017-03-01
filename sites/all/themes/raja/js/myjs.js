@@ -138,8 +138,8 @@ jQuery(document).ready(function() {
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
             snapValuesScreen[handle].value = values[handle];
-            document.getElementById('screen-min-value').innerHTML = values[handle][0];
-            document.getElementById('screen-max-value').innerHTML = values[handle][1];
+            document.getElementById('screen-min-value').innerHTML = document.getElementById('edit-field-screen-size-value-min').value;
+            document.getElementById('screen-max-value').innerHTML = document.getElementById('edit-field-screen-size-value-max').value;
         });
 
       /* END SCREEN */
@@ -173,8 +173,8 @@ jQuery(document).ready(function() {
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
             snapValuesPrice[handle].value = values[handle];
-            document.getElementById('price-min-value').innerHTML = values[handle][0];
-            document.getElementById('price-max-value').innerHTML = values[handle][1];
+            document.getElementById('price-min-value').innerHTML = document.getElementById('edit-field-price-value-min').value;
+            document.getElementById('price-max-value').innerHTML = document.getElementById('edit-field-price-value-max').value;
         });
 
       /* END PRICE */
