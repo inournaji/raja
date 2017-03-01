@@ -101,9 +101,9 @@ jQuery(document).ready(function() {
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesRam[handle].value.change = values[handle];
-            document.getElementById('ram-min-value').innerHTML = document.getElementById('edit-field-ram-value-min').value;
-            document.getElementById('ram-max-value').innerHTML = document.getElementById('edit-field-ram-value-max').value;
+            snapValuesRam[handle].value = values[handle];
+            document.getElementById('ram-min-value').innerHTML = document.getElementById('edit-field-ram-value-min').value.change;
+            document.getElementById('ram-max-value').innerHTML = document.getElementById('edit-field-ram-value-max').value.change;
         });
 
       /* END RAM */
