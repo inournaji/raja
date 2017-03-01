@@ -104,6 +104,8 @@ jQuery(document).ready(function() {
             snapValuesRam[handle].value = values[handle];
             document.getElementById('ram-min-value').innerHTML = document.getElementById('edit-field-ram-value-min').value;
             document.getElementById('ram-max-value').innerHTML = document.getElementById('edit-field-ram-value-max').value;
+            document.getElementById('edit-field-ram-value-min').change();
+            document.getElementById('edit-field-ram-value-max').change();
         });
 
       /* END RAM */
