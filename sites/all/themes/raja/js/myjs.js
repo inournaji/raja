@@ -102,7 +102,6 @@ jQuery(document).ready(function() {
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
             snapValuesRam[handle].value= values[handle];
-            document.getElementById('max-value-label').innerHTML = snapValuesRam[1].value;
         });
 
       /* END RAM */
