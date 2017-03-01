@@ -78,7 +78,7 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-ram');
 
         noUiSlider.create(snapSlider, {
-            start: [ 1, 4 ],
+            start: [ 2, 6 ],
             snap: true,
             connect: true,
             range: {
@@ -114,7 +114,7 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-screen');
 
         noUiSlider.create(snapSlider, {
-            start: [ 1, 4 ],
+            start: [ 4, 6.5 ],
             snap: true,
             connect: true,
             range: {
