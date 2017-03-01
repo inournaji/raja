@@ -149,7 +149,7 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-price');
 
         noUiSlider.create(snapSlider, {
-            start: [ 10000, 30000 ],
+            start: [ 25000, 100000 ],
             snap: true,
             connect: true,
             range: {
