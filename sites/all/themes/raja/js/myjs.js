@@ -104,6 +104,8 @@ jQuery(document).ready(function() {
             snapValuesRam[handle].value = values[handle];
             document.getElementById('ram-min-value').innerHTML = document.getElementById('edit-field-ram-value-min').value;
             document.getElementById('ram-max-value').innerHTML = document.getElementById('edit-field-ram-value-max').value;
+            jQuery('#edit-field-ram-value-min').change();
+            jQuery('#edit-field-ram-value-max').change();
         });
 
       /* END RAM */
@@ -140,6 +142,9 @@ jQuery(document).ready(function() {
             snapValuesScreen[handle].value = values[handle];
             document.getElementById('screen-min-value').innerHTML = document.getElementById('edit-field-screen-size-value-min').value;
             document.getElementById('screen-max-value').innerHTML = document.getElementById('edit-field-screen-size-value-max').value;
+            jQuery('#edit-field-screen-size-value-min').change();
+            jQuery('#edit-field-screen-size-value-max').change();
+
         });
 
       /* END SCREEN */
@@ -175,6 +180,8 @@ jQuery(document).ready(function() {
             snapValuesPrice[handle].value = values[handle];
             document.getElementById('price-min-value').innerHTML = document.getElementById('edit-field-price-value-min').value;
             document.getElementById('price-max-value').innerHTML = document.getElementById('edit-field-price-value-max').value;
+            jQuery('#edit-field-price-value-min').change();
+            jQuery('#edit-field-price-value-max').change();
         });
 
       /* END PRICE */
