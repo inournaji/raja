@@ -18,13 +18,13 @@ html, body{
 }
 /* SCROLL BAR */
 
-::-webkit-scrollbar{width:10px;height:15px;}
-::-webkit-scrollbar-button{background-color:#004D40; height:0}
-::-webkit-scrollbar-track{background-color:#009688;}
-::-webkit-scrollbar-track-piece{background-color:#009688;}
-::-webkit-scrollbar-thumb{height:100px; background-color:#004D40;border-radius:2px;}
-::-webkit-scrollbar-corner{background-color:#009688;}
-::-webkit-resizer { background-color: #004D40;}
+::-webkit-scrollbar{width:12px;height:15px;}
+::-webkit-scrollbar-button{background-color:#940005; height:0}
+::-webkit-scrollbar-track{background-color:#CC181E;}
+::-webkit-scrollbar-track-piece{background-color:#CC181E;}
+::-webkit-scrollbar-thumb{height:100px; background-color:#940005;border-radius:2px;}
+::-webkit-scrollbar-corner{background-color:#CC181E;}
+::-webkit-resizer { background-color: #940005;}
 
 /* END SCROLL BAR */
 
@@ -325,6 +325,13 @@ body .label {
     margin-left:40px;
 }
 
+@media (min-width: 768px){
+    #block-views-mobile-slider-block{
+        max-width:80%;
+        margin: 0 auto;
+    }
+}
+
 /* END HOME PAGE BIG SLIDER */
 
 /* HOME PAGE MINI SLIDER */
@@ -410,14 +417,22 @@ section#block-views-mobile-grid-block {
     border-radius: 0 0 5px 5px;
 }
 .mobile-grid .mobile .mobile-price{
-    background-color:rgba(0,0,0,0.7);
-    padding:3px;
-    text-decoration:none;
-    color:#fff;
     position:absolute;
     bottom:52px;
+    color:#fff;
 }
-
+.mobile-grid .mobile .normal-price{
+    padding:3px;
+    background-color:rgba(0,0,0,0.8);
+}
+.mobile-grid .mobile .sold-price{
+    padding:3px;
+    background-color:#4CAF50;
+}
+.mobile-grid .mobile .old-price{
+    padding:3px;
+    background-color:#e74c3c;
+}
 /* SAMSUNG */
 
 .mobile-grid .samsung-mobile:hover,
