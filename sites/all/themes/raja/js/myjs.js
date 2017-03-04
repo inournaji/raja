@@ -78,7 +78,7 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-ram');
 
         noUiSlider.create(snapSlider, {
-            start: [ 1, 4 ],
+            start: [ 2, 6 ],
             snap: true,
             connect: true,
             range: {
@@ -101,7 +101,11 @@ jQuery(document).ready(function() {
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesRam[handle].value= values[handle];
+            snapValuesRam[handle].value = values[handle];
+            document.getElementById('ram-min-value').innerHTML = document.getElementById('edit-field-ram-value-min').value;
+            document.getElementById('ram-max-value').innerHTML = document.getElementById('edit-field-ram-value-max').value;
+            jQuery('#edit-field-ram-value-min').change();
+            jQuery('#edit-field-ram-value-max').change();
         });
 
       /* END RAM */
@@ -112,20 +116,20 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-screen');
 
         noUiSlider.create(snapSlider, {
-            start: [ 1, 4 ],
+            start: [ 4, 6.5 ],
             snap: true,
             connect: true,
             range: {
-                'min': 1,
-                '10%': 1.5,
-                '20%': 2,
-                '30%': 2.5,
-                '40%': 3,
-                '50%': 3.5,
-                '60%': 4,
-                '70%': 4.5,
-                '80%': 5,
-                'max': 6
+                'min': 3,
+                '10%': 3.5,
+                '20%': 4,
+                '30%': 4.7,
+                '40%': 5.5,
+                '50%': 6,
+                '60%': 6.5,
+                '70%': 7,
+                '80%': 9,
+                'max': 10
             }
         });
 
@@ -135,7 +139,12 @@ jQuery(document).ready(function() {
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesScreen[handle].value= values[handle];
+            snapValuesScreen[handle].value = values[handle];
+            document.getElementById('screen-min-value').innerHTML = document.getElementById('edit-field-screen-size-value-min').value;
+            document.getElementById('screen-max-value').innerHTML = document.getElementById('edit-field-screen-size-value-max').value;
+            jQuery('#edit-field-screen-size-value-min').change();
+            jQuery('#edit-field-screen-size-value-max').change();
+
         });
 
       /* END SCREEN */
@@ -145,20 +154,20 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-price');
 
         noUiSlider.create(snapSlider, {
-            start: [ 10000, 30000 ],
+            start: [ 25000, 100000 ],
             snap: true,
             connect: true,
             range: {
                 'min': 10000,
-                '10%': 15000,
-                '20%': 20000,
-                '30%': 30000,
-                '40%': 50000,
-                '50%': 70000,
-                '60%': 100000,
-                '70%': 150000,
-                '80%': 200000,
-                'max': 250000
+                '10%': 25000,
+                '20%': 50000,
+                '30%': 75000,
+                '40%': 100000,
+                '50%': 150000,
+                '60%': 200000,
+                '70%': 300000,
+                '80%': 400000,
+                'max': 500000
             }
         });
 
@@ -168,7 +177,11 @@ jQuery(document).ready(function() {
         ];
 
         snapSlider.noUiSlider.on('update', function( values, handle ) {
-            snapValuesPrice[handle].value= values[handle];
+            snapValuesPrice[handle].value = values[handle];
+            document.getElementById('price-min-value').innerHTML = document.getElementById('edit-field-price-value-min').value;
+            document.getElementById('price-max-value').innerHTML = document.getElementById('edit-field-price-value-max').value;
+            jQuery('#edit-field-price-value-min').change();
+            jQuery('#edit-field-price-value-max').change();
         });
 
       /* END PRICE */
