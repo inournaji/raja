@@ -313,7 +313,7 @@ body .label {
 }
 
 @media (min-width: 768px){
-    .big-slider{
+    #block-views-mobile-slider-block{
         max-width:80%;
         margin: 0 auto;
     }
