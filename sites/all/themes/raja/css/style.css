@@ -18,13 +18,13 @@ html, body{
 }
 /* SCROLL BAR */
 
-::-webkit-scrollbar{width:10px;height:15px;}
-::-webkit-scrollbar-button{background-color:#004D40; height:0}
-::-webkit-scrollbar-track{background-color:#009688;}
-::-webkit-scrollbar-track-piece{background-color:#009688;}
-::-webkit-scrollbar-thumb{height:100px; background-color:#004D40;border-radius:2px;}
-::-webkit-scrollbar-corner{background-color:#009688;}
-::-webkit-resizer { background-color: #004D40;}
+::-webkit-scrollbar{width:12px;height:15px;}
+::-webkit-scrollbar-button{background-color:#940005; height:0}
+::-webkit-scrollbar-track{background-color:#CC181E;}
+::-webkit-scrollbar-track-piece{background-color:#CC181E;}
+::-webkit-scrollbar-thumb{height:100px; background-color:#940005;border-radius:2px;}
+::-webkit-scrollbar-corner{background-color:#CC181E;}
+::-webkit-resizer { background-color: #940005;}
 
 /* END SCROLL BAR */
 
