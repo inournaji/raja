@@ -312,6 +312,13 @@ body .label {
     margin-left:40px;
 }
 
+@media (min-width: 768px){
+    .big-slider{
+        max-width:80%;
+        margin: 0 auto;
+    }
+}
+
 /* END HOME PAGE BIG SLIDER */
 
 /* HOME PAGE MINI SLIDER */
