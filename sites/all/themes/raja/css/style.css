@@ -81,7 +81,7 @@ html, body{
 .views-exposed-form .views-widget {
     /* display: inline-block; */
     /* margin-left: 10px; */
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .views-exposed-form .form-control:focus {
@@ -105,6 +105,17 @@ html, body{
     color: #37474F;
     background: #fff;
     border-color: #37474F;
+}
+.views-exposed-form .views-exposed-widget {
+    float: none;
+    padding: 0;
+    display: inline-block;
+    /* margin: 0 auto; */
+}
+.views-exposed-widgets {
+    margin-bottom: .5em;
+    display: flex;
+    justify-content: center;
 }
 /* Tables */
 .table-bordered, th, td {
@@ -179,6 +190,8 @@ header#navbar.navbar-inverse a.name.navbar-brand {}
 header#navbar.navbar-inverse a {
     /* font-size: 19px; */
     transition: all 0.1s linear;
+
+    border-bottom: 3px solid #fafafa;
 }
 @media (min-width: 768px) {
 
@@ -293,7 +306,7 @@ body .label {
     display: none;
 }
 /*.region-content{*/
-    /*min-height:1000px;*/
+/*min-height:1000px;*/
 /*}*/
 
 /* HOME PAGE BIG SLIDER */
@@ -501,17 +514,35 @@ section#block-views-mobile-grid-block {
 
 /* END SINGLE MOBILE PAGE */
 /* Warranty page */
+.waranty-wrapper>div {
+    display: table-row;
+}
+
+.waranty-wrapper>div:nth-child(even) {
+    background: #ddd;
+}
+.page-warranty h1.page-header {
+    text-align: right;
+}
+.waranty-wrapper {
+    margin: 20px 0;
+    display: table;
+    width: 100%;
+}
 .waranty-wrapper > div>div {
-    float: left;
+    /* float: right; */
     margin-bottom: 30px;
+    display: table-cell;
+    padding: 15px;
 }
 
 .waranty-wrapper > div>div:first-child {
-    clear: left;
-    min-width: 25%;
+    clear: right;
+    max-width: 25%;
+    width: 25%;
 }
 
-.waranty-wrapper > div>div:last-child {
+.waranty-wrapper > div>div:first-child {
     font-weight: bold;
 }
 
@@ -519,6 +550,7 @@ section#block-views-mobile-grid-block {
     margin-bottom: 53px;
     float: left;
     width: 100%;
+    direction: rtl;
 }
 /* Warranty page End */
 /* ACCESSORIES & HARDWARE */
