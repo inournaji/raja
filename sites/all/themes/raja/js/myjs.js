@@ -100,7 +100,7 @@ jQuery(document).ready(function() {
             document.getElementById('edit-field-ram-value-max')
         ];
 
-        snapSlider.noUiSlider.on('start', function( values, handle ) {
+        snapSlider.noUiSlider.on('slide', function( values, handle ) {
             snapValuesRam[handle].value = values[handle];
             document.getElementById('ram-min-value').innerHTML = document.getElementById('edit-field-ram-value-min').value;
             document.getElementById('ram-max-value').innerHTML = document.getElementById('edit-field-ram-value-max').value;
@@ -138,7 +138,7 @@ jQuery(document).ready(function() {
             document.getElementById('edit-field-screen-size-value-max')
         ];
 
-        snapSlider.noUiSlider.on('start', function( values, handle ) {
+        snapSlider.noUiSlider.on('slide', function( values, handle ) {
             snapValuesScreen[handle].value = values[handle];
             document.getElementById('screen-min-value').innerHTML = document.getElementById('edit-field-screen-size-value-min').value;
             document.getElementById('screen-max-value').innerHTML = document.getElementById('edit-field-screen-size-value-max').value;
@@ -176,7 +176,7 @@ jQuery(document).ready(function() {
             document.getElementById('edit-field-price-value-max')
         ];
 
-        snapSlider.noUiSlider.on('start', function( values, handle ) {
+        snapSlider.noUiSlider.on('slide', function( values, handle ) {
             snapValuesPrice[handle].value = values[handle];
             document.getElementById('price-min-value').innerHTML = document.getElementById('edit-field-price-value-min').value;
             document.getElementById('price-max-value').innerHTML = document.getElementById('edit-field-price-value-max').value;
