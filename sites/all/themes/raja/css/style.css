@@ -586,6 +586,28 @@ section#block-views-mobile-grid-block {
 .view.view-branches- .views-field.views-field-nothing {
     direction: ltr;
 }
+.page-branches h1.page-header {
+    direction: rtl;
+}
+
+.view.view-branches- .views-row p {
+    /* margin: 0; */
+    line-height: 40px;
+    text-align: center;
+}
+
+.view.view-branches- .views-row p:first-child {
+    margin-top: 10px;
+}
+
+.view.view-branches- .views-row p:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.view.view-branches- .views-row img.img-responsive {
+    display: block;
+    margin: 0 auto;
+}
 /* Company Branches End*/
 /* Warranty page */
 
