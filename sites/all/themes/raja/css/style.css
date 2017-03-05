@@ -528,7 +528,67 @@ section#block-views-mobile-grid-block {
 }
 
 /* END SINGLE MOBILE PAGE */
+/* Company Branches */
+.view.view-branches- {
+    direction: rtl;
+}
+.view.view-branches- {
+    direction: rtl;
+}
+
+.view.view-branches- .view-content {
+    /* display: table; */
+    width: 100%;
+    min-height: 40vh;
+}
+
+.view.view-branches- .views-row {
+    display: table-row;
+    padding: 15px 0;
+}
+
+.view.view-branches- .views-row {
+    display: block;
+    /* height: 44px; */
+    line-height: 63px;
+    /* text-align: center; */
+    padding: 0;
+    width: 100%;
+}
+
+.view.view-branches- .views-row:nth-child(even) {
+    background: #ddd;
+}
+
+.view.view-branches- .views-row .views-row.views-row-1.views-row-odd.views-row-first.views-row-last {}
+
+.view.view-branches- .views-row .views-field.views-field-nothing-1 {
+    display: table;
+    padding: 0;
+    /* height: 100%; */
+    padding: top;
+}
+
+.view.view-branches- .views-row .views-field.views-field-nothing-1 span.field-content {
+    display: table-cell;
+}
+
+.view.view-branches- .views-row .views-field.views-field-nothing-1 span.field-content a#modal-132 {
+    color: #414141;
+    font-size: 15px;
+    transition: all 0.1s linear;
+}
+
+.view.view-branches- .views-row .views-field.views-field-nothing-1 span.field-content a#modal-132:hover {
+    opacity: 0.8;
+    font-size: 16px;
+}
+.view.view-branches- .views-field.views-field-nothing {
+    direction: ltr;
+}
+/* Company Branches End*/
 /* Warranty page */
+
 .waranty-wrapper>div {
     display: table-row;
 }
