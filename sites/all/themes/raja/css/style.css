@@ -186,6 +186,7 @@ header#navbar.navbar-inverse {
     width: 100%;
     border-radius: 0;
     padding: 0 calc((100% - 1170px) / 2);
+    margin-bottom: 0;
 }
 
 header#navbar.navbar-inverse a.active, header#navbar.navbar-inverse a:hover {
