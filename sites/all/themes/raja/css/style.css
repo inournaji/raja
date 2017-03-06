@@ -9,6 +9,15 @@ html, body{
     font-size: 16px;
 }
 
+/* nav logo */
+
+.logo img{
+    width: 150px;
+}
+.navbar-header .logo{
+    margin-left: 93px;
+}
+
 .view-empty {
     min-height: 44vh;
     line-height: 44vh;
