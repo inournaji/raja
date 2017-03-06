@@ -12,10 +12,11 @@ html, body{
 /* nav logo */
 
 .logo img{
-    width: 150px;
+    width: 175px;
 }
 .navbar-header .logo{
-    margin-left: 93px;
+    margin-left: 35px;
+    margin-top: 15px;
 }
 
 .view-empty {
