@@ -761,7 +761,22 @@ section#block-views-mobile-grid-block {
 }
 /* Company Branches End*/
 /* Warranty page */
+body .view-empty p:last-child {
+    display: none;
+}
 
+body .view-empty p:first-child {
+    display: block;
+}
+body.submit .view-empty p:last-child {
+    display: block;
+}
+
+body.submit .view-empty p:first-child {
+    display: none;
+}
+
+body .view-empty p:last-child {}
 .waranty-wrapper>div {
     display: table-row;
 }

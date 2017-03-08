@@ -189,5 +189,8 @@ jQuery(document).ready(function() {
     }
 
   /* END MOBILE RANGE SLIDER */
-
+//    Warranty page
+    jQuery(document).ajaxSuccess(function() {
+        jQuery( "body" ).addClass('submit')
+    });
 });
