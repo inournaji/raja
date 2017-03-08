@@ -287,10 +287,7 @@ header nav ul.navbar-nav{
 
 .accessories .modal-body> div > ul {
     padding: 0;
-    position: absolute;
-    left: calc(70% + 15px);
-    top: 10px;
-    padding: 0 15px;
+
 }
 .accessories  .mobile {position: absolute;
     left: calc(70% + 15px);
