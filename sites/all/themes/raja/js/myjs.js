@@ -178,8 +178,8 @@ jQuery(document).ready(function() {
 
         snapSlider.noUiSlider.on('slide', function( values, handle ) {
             snapValuesPrice[handle].value = values[handle];
-            document.getElementById('price-min-value').innerHTML = document.getElementById('edit-field-price-value-min').value;
-            document.getElementById('price-max-value').innerHTML = document.getElementById('edit-field-price-value-max').value;
+            document.getElementById('price-min-value').innerHTML = parseInt( document.getElementById('edit-field-price-value-min').value).toString();
+            document.getElementById('price-max-value').innerHTML =  parseInt(document.getElementById('edit-field-price-value-max').value).toString();
             jQuery('#edit-field-price-value-min').change();
             jQuery('#edit-field-price-value-max').change();
         });
