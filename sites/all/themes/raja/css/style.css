@@ -548,29 +548,29 @@ section#block-views-mobile-grid-block {
 }
 .single-mobile-page .mobile-speci .screen .image{
     background: url(../images/screen.png);
-    background-repeat:no-repeat;
-    background-size:contain;
+    background-repeat:no-repeat center;
+    background-size:50px;
     width:100px;
     height:100px;
 }
 .single-mobile-page .mobile-speci .camera .image{
-    background: url(../images/camera.png);
+    background: url(../images/camera.png) center;
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:50px;
     width:100px;
     height:100px;
 }
 .single-mobile-page .mobile-speci .battery .image{
-    background: url(../images/battery.png);
+    background: url(../images/battery.png) center;
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:50px;
     width:100px;
     height:100px;
 }
 .single-mobile-page .mobile-speci .price .image{
-    background: url(../images/price.png);
+    background: url(../images/price.png) center;
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:50px;
     width:100px;
     height:100px;
 }
