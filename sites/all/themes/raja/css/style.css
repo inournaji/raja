@@ -30,13 +30,13 @@ html, body{
 }
 /* SCROLL BAR */
 
-::-webkit-scrollbar{width:12px;height:15px;}
+/*::-webkit-scrollbar{width:12px;height:15px;}
 ::-webkit-scrollbar-button{background-color:#221d5f; height:0}
 ::-webkit-scrollbar-track{background-color:#221d5f;}
 ::-webkit-scrollbar-track-piece{background-color:#221d5f;}
 ::-webkit-scrollbar-thumb{height:100px; background-color:#940005;border-radius:2px;}
 ::-webkit-scrollbar-corner{background-color:#CC181E;}
-::-webkit-resizer { background-color: #221d5f;}
+::-webkit-resizer { background-color: #221d5f;}*/
 
 /* END SCROLL BAR */
 
@@ -466,21 +466,20 @@ section#block-views-mobile-grid-block {
 }
 .mobile-grid .mobile .mobile-price{
     position:absolute;
-    bottom:52px;
+    bottom:65px;
     color:#fff;
 }
 .mobile-grid .mobile .normal-price{
     padding:3px;
-    background-color:rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.65);
 }
 .mobile-grid .mobile .sold-price{
     padding:3px;
-    background-color:#4CAF50;
+    background-color: rgba(76, 175, 80, 0.76);
 }
 .mobile-grid .mobile .old-price{
     padding:3px;
-    background-color:#e74c3c;
-}
+    background-color: rgba(231, 76, 60, 0.76);}
 /* SAMSUNG */
 
 .mobile-grid .samsung-mobile:hover,
