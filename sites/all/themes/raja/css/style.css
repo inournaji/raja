@@ -292,6 +292,11 @@ header nav ul.navbar-nav{
     top: 10px;
     padding: 0 15px;
 }
+.accessories  .mobile {position: absolute;
+    left: calc(70% + 15px);
+    top: 10px;
+    padding: 0 15px;
+}
 .modal-body span.label.label-info {
     padding: 10px;
     font-size: 14px;
@@ -575,6 +580,14 @@ section#block-views-mobile-grid-block {
 
 /* END SINGLE MOBILE PAGE */
 /* Company Branches */
+.image img.img-responsive {
+    display: inline-block;
+    width: 75px;
+    margin-left: 13px;
+}
+.view.view-branches- tr:nth-child(odd) td {
+    background: #f6f6f6;
+}
 .view.view-branches- {
     direction: rtl;
 }
