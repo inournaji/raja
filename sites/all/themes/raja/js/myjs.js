@@ -76,6 +76,8 @@ jQuery(document).ready(function() {
       /* RAM */
 
         var snapSlider = document.getElementById('slider-snap-ram');
+        jQuery('#edit-field-ram-value-min').val('1').change();
+        jQuery('#edit-field-ram-value-max').val('10').change();
 
         noUiSlider.create(snapSlider, {
             start: [ 1, 10 ],
@@ -112,6 +114,9 @@ jQuery(document).ready(function() {
 
 
       /* SCREEN */
+
+        jQuery('#edit-field-screen-size-value-min').val('3').change();
+        jQuery('#edit-field-screen-size-value-max').val('13').change();
 
         var snapSlider = document.getElementById('slider-snap-screen');
 
@@ -152,24 +157,26 @@ jQuery(document).ready(function() {
 
       /* PRICE */
 
+      //default hidden filters values
+        jQuery('#edit-field-price-value-min').val('25000').change();
+        jQuery('#edit-field-price-value-max').val('600000').change();
+
         var snapSlider = document.getElementById('slider-snap-price');
 
         noUiSlider.create(snapSlider, {
             start: [ 10000, 600000 ],
             snap: true,
-            tooltips: [ false, false, true ],
             connect: true,
             range: {
-                'min': 10000,
-                '10%': 25000,
-                '20%': 50000,
-                '30%': 75000,
-                '40%': 100000,
-                '50%': 150000,
-                '60%': 200000,
-                '70%': 300000,
-                '80%': 400000,
-                '90%': 500000,
+                'min': 25000,
+                '10%': 50000,
+                '20%': 75000,
+                '30%': 100000,
+                '40%': 150000,
+                '50%': 200000,
+                '60%': 300000,
+                '70%': 400000,
+                '80%': 500000,
                 'max': 600000
             }
         });
