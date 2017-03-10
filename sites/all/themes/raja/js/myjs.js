@@ -78,7 +78,7 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-ram');
 
         noUiSlider.create(snapSlider, {
-            start: [ 2, 6 ],
+            start: [ 1, 10 ],
             snap: true,
             connect: true,
             range: {
@@ -116,7 +116,7 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-screen');
 
         noUiSlider.create(snapSlider, {
-            start: [ 4, 6.5 ],
+            start: [ 3, 13 ],
             snap: true,
             connect: true,
             range: {
@@ -129,7 +129,8 @@ jQuery(document).ready(function() {
                 '60%': 6.5,
                 '70%': 7,
                 '80%': 9,
-                'max': 10
+                '90%': 10,
+                'max': 13
             }
         });
 
@@ -154,8 +155,9 @@ jQuery(document).ready(function() {
         var snapSlider = document.getElementById('slider-snap-price');
 
         noUiSlider.create(snapSlider, {
-            start: [ 25000, 100000 ],
+            start: [ 10000, 600000 ],
             snap: true,
+            tooltips: [ false, wNumb({}), true ],
             connect: true,
             range: {
                 'min': 10000,
@@ -167,7 +169,8 @@ jQuery(document).ready(function() {
                 '60%': 200000,
                 '70%': 300000,
                 '80%': 400000,
-                'max': 500000
+                '90%': 500000,
+                'max': 600000
             }
         });
 
@@ -193,4 +196,8 @@ jQuery(document).ready(function() {
     jQuery(document).ajaxSuccess(function() {
         jQuery( "body" ).addClass('submit')
     });
+
+
+    // change all selects first item text
+    jQuery('select option:first-child').text('All')
 });

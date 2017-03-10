@@ -94,6 +94,10 @@ html, body{
 }
 /* Filters */
 
+.views-exposed-form{
+    text-align: right;
+}
+
 .views-exposed-form .form-control {
     border: none;
     border-bottom: 1px solid #aaa;
