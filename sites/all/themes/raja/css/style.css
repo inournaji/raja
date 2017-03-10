@@ -820,7 +820,7 @@ body .view-empty p:last-child {}
     direction: rtl;
 }
 
-#block-system-main .view-content{
+.view-id-warranty_check_ .view-content{
     display: block;
     margin: auto;
     max-width: 550px;
