@@ -819,6 +819,14 @@ body .view-empty p:last-child {}
     width: 100%;
     direction: rtl;
 }
+
+#block-system-main .view-content{
+    display: block;
+    margin: auto;
+    max-width: 550px;
+    background-color: #fff;
+    box-shadow: 0 0 2px 2px #dadada;
+}
 /* Warranty page End */
 /* ACCESSORIES & HARDWARE */
 
