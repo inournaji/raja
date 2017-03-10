@@ -157,7 +157,7 @@ jQuery(document).ready(function() {
         noUiSlider.create(snapSlider, {
             start: [ 10000, 600000 ],
             snap: true,
-            tooltips: [ false, wNumb({}), true ],
+            tooltips: [ false, false, true ],
             connect: true,
             range: {
                 'min': 10000,
