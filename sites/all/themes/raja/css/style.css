@@ -434,6 +434,12 @@ body .label {
     margin-left: 20px;
     float: left;
 }
+#views-exposed-form-mobile-grid-block .views-exposed-form {
+   margin-top: 15px;
+}
+.sliders-wrapper {
+    width: 100%;
+}
 section#block-block-8 {
     display: flex;
     justify-content: space-around;
