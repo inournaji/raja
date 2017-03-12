@@ -81,5 +81,6 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
   <script src="//code.tidio.co/yeujy7y8vwh4sjybaao1xscpl4y2u2ht.js"></script>
+ <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58c5b2b972200258"></script>
 </body>
 </html>
