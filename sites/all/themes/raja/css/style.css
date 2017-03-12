@@ -481,6 +481,9 @@ section#block-views-mobile-grid-block {
     box-shadow: 0 0 10px 1px rgba(228, 27, 35, 0.21);
     transition: all 0.2s ease-in-out;
 }
+.mobile-grid .mobile:hover, .mobile-grid .samsung-mobile:focus{
+    box-shadow: 0 0 7px 4px rgba(34, 29, 95, 0.52) !important;
+}
 .mobile-grid .mobile a{
     text-decoration:none;
 }

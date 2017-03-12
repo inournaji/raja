@@ -1,5 +1,17 @@
+//update mobile grid colors
+function update_mobile_colors() {
+    if(jQuery('.view.view-mobile-grid').length > 0) {
+        jQuery('.view.view-mobile-grid .col-lg-3').each(function () {
+            console.log(jQuery.trim(jQuery(this).find('.views-field-field-brand-color').text()));
+            var color = jQuery.trim(jQuery(this).find('.views-field-field-brand-color').text());
+            jQuery(this).find('.mobile-name').css('background', color);
+            var box_shadow = '0 0 5px 1px ' + color;
+            jQuery(this).find('.mobile').css('box-shadow', box_shadow)
+        });
+    }
+}
 jQuery(document).ready(function() {
-
+    update_mobile_colors();
   /* LOADER */
 
     jQuery(window).load(function () {
@@ -200,11 +212,14 @@ jQuery(document).ready(function() {
 
   /* END MOBILE RANGE SLIDER */
 //    Warranty page
+
     jQuery(document).ajaxSuccess(function() {
-        jQuery( "body" ).addClass('submit')
+        jQuery( "body" ).addClass('submit');
+        update_mobile_colors();
     });
 
 
     // change all selects first item text
     jQuery('select option:first-child').text('All')
+
 });
