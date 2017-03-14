@@ -1116,3 +1116,21 @@ box-shadow: 0 0 2px 2px #dadada;
         width: 1199px;
     }
 }
+
+/*Add this */
+.addthis_24x24_style .at-icon{
+    height: 35px !important;
+    width: 35px !important;
+}
+.at4-follow .at4-follow-container .at-icon-wrapper {
+    height: 35px !important;
+    width: 35px !important;
+}
+.at4-follow-24 .at-follow-btn {
+    height: 35px !important;
+    width: 35px !important;
+}
+.at4-follow.at4-follow-24 .at4-follow-container {
+    height: auto !important;
+    width: 35px !important;
+}
