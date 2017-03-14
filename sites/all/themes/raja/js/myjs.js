@@ -79,16 +79,20 @@ jQuery(document).ready(function() {
 
 
     var mini_slider = ".home-page-mini-slider >  .view-content";
-
-    jQuery(mini_slider).slick({
-        cssEase: 'linear',
-        adaptiveHeight: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        arrows: false,
+    jQuery(mini_slider).each(function () {
+        if(jQuery(this).find('>div').length > 3 ) {
+            jQuery(this).slick({
+                cssEase: 'linear',
+                adaptiveHeight: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                arrows: false,
+            });
+        }
     });
+
 
   /* END SLICK SLIDER */
 
