@@ -414,10 +414,22 @@ body .label {
 /* HOME PAGE BIG SLIDER */
 
 .big-slider{
-    margin-top:-15px;
+    /* margin-top:-15px; */
+}
+.view.view-mobile-slider {
+    width: 100%;
+}
+
+.front section.col-sm-12 {
+    padding: 0;
+}
+
+.view.view-mobile-slider  .slick-list.draggable {
+    width: 100%;
+    max-height: calc(100vh - 100px);
 }
 .big-slider .view-content{
-    margin-top:28px;
+    /* margin-top:28px; */
 }
 .slick-next{
     margin-right:40px;
@@ -429,8 +441,9 @@ body .label {
 
 @media (min-width: 768px){
     #block-views-mobile-slider-block{
-        max-width:80%;
+        max-width: 100%;
         margin: 0 auto;
+        max-height: calc(100vh - 100px);
     }
 }
 

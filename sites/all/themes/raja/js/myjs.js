@@ -84,7 +84,8 @@ jQuery(document).ready(function() {
         cssEase: 'linear',
         adaptiveHeight: true,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 3,
+        slidesToScroll: 1,
         autoplay: true,
         arrows: false,
     });
