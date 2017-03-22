@@ -254,7 +254,7 @@ header#navbar.navbar-inverse {
     width: 100%;
     border-radius: 0;
     padding: 0 calc((100% - 1170px) / 2);
-    margin: 30px 0;
+    margin: 15px 0 20px;
 }
 
 header#navbar.navbar-inverse a.active, header#navbar.navbar-inverse a:hover {
@@ -426,10 +426,11 @@ body .label {
 .big-slider{
     /* margin-top:-15px; */
 }
-.view.view-mobile-slider {
-    width: 100%;
+.view.view-mobile-slider , .view.view-mobile-slider img {
+    max-width: 100%;
     /* display: flex; */
     /* justify-content: center; */
+    max-height: calc(100vh - 150px);
 }
 
 .front section.col-sm-12 {
@@ -1173,10 +1174,40 @@ box-shadow: 0 0 2px 2px #dadada;
     opacity: 1;
     font-size: 25px;
     transition: all 0.3s linear;
+    display: none;
 }
 
 .slick-prev:hover:before, .slick-next:hover:before {
     font-size: 27px;
     transform: scale(1.1, 1.1);
+    color: #e41b23;
+}
+.slick-dots {
+    bottom:15px;
+}
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 1;
     color: #e41b23;
 }

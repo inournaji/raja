@@ -74,7 +74,8 @@ jQuery(document).ready(function() {
         infinite: true,
         slidesToShow: 1,
         autoplay: true,
-        arrows: true,
+        arrows: false,
+        dots: true
     });
 
 
