@@ -10,8 +10,19 @@ function update_mobile_colors() {
         });
     }
 }
+function update_accessories_color() {
+    if(jQuery('.accessories').length > 0) {
+        jQuery('.accessories .accessories-item').each(function() {
+            var color = jQuery.trim(jQuery(this).find('.views-field.views-field-field-brand-color.hidden').text());
+            jQuery(this).find('.accessories-title').css('background', color);
+            var box_shadow = '0 0 5px 1px ' + color;
+            jQuery(this).find('.views-field-nothing a').css('box-shadow', box_shadow)
+        })
+    }
+}
 jQuery(document).ready(function() {
     update_mobile_colors();
+    update_accessories_color();
   /* LOADER */
 
     jQuery(window).load(function () {
@@ -68,15 +79,20 @@ jQuery(document).ready(function() {
 
 
     var mini_slider = ".home-page-mini-slider >  .view-content";
-
-    jQuery(mini_slider).slick({
-        cssEase: 'linear',
-        adaptiveHeight: true,
-        infinite: true,
-        slidesToShow: 1,
-        autoplay: true,
-        arrows: false,
+    jQuery(mini_slider).each(function () {
+        if(jQuery(this).find('>div').length > 3 ) {
+            jQuery(this).slick({
+                cssEase: 'linear',
+                adaptiveHeight: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                arrows: false,
+            });
+        }
     });
+
 
   /* END SLICK SLIDER */
 
@@ -216,6 +232,7 @@ jQuery(document).ready(function() {
     jQuery(document).ajaxSuccess(function() {
         jQuery( "body" ).addClass('submit');
         update_mobile_colors();
+        update_accessories_color();
     });
 
 
