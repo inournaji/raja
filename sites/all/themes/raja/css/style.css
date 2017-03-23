@@ -418,6 +418,36 @@ body .label {
 /*}*/
 
 /* HOME PAGE BIG SLIDER */
+.sold:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100px;
+    background: red;
+    transform: skew(46deg);
+}
+
+.sold {
+    position: relative;
+    overflow: hidden;
+}
+
+.sold:after {
+    content: ' Sold';
+    position: absolute;
+    top: 11px;
+    right: 38px;
+    width: 50px;
+    height: 100px;
+    transform: rotate(45deg);
+    /* background: #000; */
+    font-size: 17px;
+    color: #fff;
+    padding-top: 3px;
+    text-align: center;
+}
 .raja .view-content {
     display: flex;
     flex-wrap: nowrap;
