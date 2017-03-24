@@ -418,6 +418,13 @@ body .label {
 /*}*/
 
 /* HOME PAGE BIG SLIDER */
+a.link-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 .sold:before {
     content: ' ';
     position: absolute;
@@ -494,8 +501,8 @@ h2.block-title {
     margin: 0 0 15px;
 }
 
-.raja .view-content > div:not(:first-child):not(:last-child) .main-wrapper {
-    border-left: 1px solid #e41b23;
+.raja .view-content > div:not(:last-child) .main-wrapper {
+    /* border-left: 1px solid #e41b23; */
     border-right: 1px solid #e41b23;
 }
 
