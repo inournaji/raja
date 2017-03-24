@@ -563,6 +563,30 @@ h2.block-title {
 .big-slider{
     /* margin-top:-15px; */
 }
+
+.view-app-home .views-row {
+    display: flex;
+    align-items: stretch;
+}
+
+.view-app-home .views-row-even>div:first-child {
+    order: 2;
+}
+
+.view-app-home img.img-responsive {
+    width: 100%;
+}
+
+.view-app-home .views-field.views-field-field-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100%; */
+}
+
+.raja .view-content > div:nth-child(3):not(:last-child) .main-wrapper {
+    border-right: 1px solid #e41b23;
+}
 .view.view-mobile-slider , .view.view-mobile-slider img {
     max-width: 100%;
     /* display: flex; */
