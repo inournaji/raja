@@ -21,8 +21,8 @@ function update_accessories_color() {
     }
 }
 jQuery(document).ready(function() {
-    update_mobile_colors();
-    update_accessories_color();
+    //update_mobile_colors();
+    //update_accessories_color();
   /* LOADER */
 
     jQuery(window).load(function () {
@@ -232,8 +232,8 @@ jQuery(document).ready(function() {
 
     jQuery(document).ajaxSuccess(function() {
         jQuery( "body" ).addClass('submit');
-        update_mobile_colors();
-        update_accessories_color();
+        //update_mobile_colors();
+        //update_accessories_color();
     });
 
 
