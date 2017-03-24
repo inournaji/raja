@@ -1044,6 +1044,7 @@ box-shadow: 0 0 2px 2px #dadada;
 .accessories .view.view-mobile-accessories {}
 
 .accessories .views-field.views-field-nothing a {
+
     /* text-align: center; */
     /* background: #fff; */
     /* margin: 10px; */
@@ -1054,6 +1055,11 @@ box-shadow: 0 0 2px 2px #dadada;
     /* padding-top: 10px; */
     /* border: 0; */
     /* border-radius: 3px; */
+
+
+
+
+
 }
 
 .accessories .views-field.views-field-nothing a:hover {
