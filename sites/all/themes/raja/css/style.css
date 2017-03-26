@@ -32,7 +32,7 @@ html, body{
 /* nav logo */
 
 .logo img{
-    width: 150px;
+    height: 50px;
 }
 .navbar-header .logo{
     margin-left: 35px;
@@ -280,8 +280,8 @@ header#navbar.navbar-inverse a.name.navbar-brand {}
     border-bottom: 3px solid transparent;
     color: #fff;
     padding-bottom: 41px;
-    height: 90px;
-    padding: 40px 15px 0;
+    height: 73px;
+    padding: 28px 15px 0;
     font-size: 18px;
 }
 
@@ -468,6 +468,8 @@ section#block-locale-language {
     background: #fafafa;
     color: #000;
     padding: 5px 10px;
+    margin-top: 11px;
+    display: block;
 }
 
 #block-locale-language ul.language-switcher-locale-url a.language-link.active {
@@ -481,7 +483,7 @@ section#block-locale-language {
 .region.region-navigation {
     float: left;
     vertical-align: middle;
-    height: 90px;
+    height: 73px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -617,7 +619,7 @@ h2.block-title {
     #block-views-mobile-slider-block{
         max-width: 100%;
         margin: 0 auto;
-        max-height: calc(100vh - 100px);
+        max-height: 456px;
     }
 }
 
