@@ -714,21 +714,21 @@ section#block-views-mobile-grid-block {
     font-weight:bold;
 }
 .mobile-grid .mobile{
-    border-radius:5px;
-    background-color: #fdfdfd;
-    /* margin-bottom: 10px; */
-    box-shadow: 0 0 10px 1px rgba(228, 27, 35, 0.21);
-    transition: all 0.2s ease-in-out;
+    /*border-radius:5px;*/
+    /*background-color: #fdfdfd;*/
+     /*margin-bottom: 10px; */
+    /*box-shadow: 0 0 10px 1px rgba(228, 27, 35, 0.21);*/
+    /*transition: all 0.2s ease-in-out;*/
 }
 .mobile-grid .mobile:hover, .mobile-grid .samsung-mobile:focus{
-    box-shadow: 0 0 7px 4px rgba(34, 29, 95, 0.52) !important;
+    /*box-shadow: 0 0 7px 4px rgba(34, 29, 95, 0.52) !important;*/
 }
 .mobile-grid .mobile a{
     text-decoration:none;
 }
 .mobile-grid .mobile:hover,
 .mobile-grid .mobile:focus{
-    box-shadow: 0 0 10px 4px #bdc3c7;
+    /*box-shadow: 0 0 10px 4px #bdc3c7;*/
 }
 .mobile-grid .mobile img{
     display:inline-block;
