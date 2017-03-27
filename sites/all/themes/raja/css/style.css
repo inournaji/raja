@@ -745,6 +745,27 @@ section#block-views-mobile-grid-block {
     line-height:35px;
     border-radius: 0 0 5px 5px;
 }
+div#collapse1 {
+    overflow: hidden;
+    /* padding: 15px 0; */
+}
+
+form#views-exposed-form-mobile-grid-block .panel-default>.panel-heading {
+    padding: 0;
+}
+
+form#views-exposed-form-mobile-grid-block .panel-default>.panel-heading h4.panel-title a {
+    padding: 15px;
+    background: #ce181f;
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+div#collapse1>div {
+    margin-top: 20px;
+}
 .mobile-grid .mobile .mobile-price{
     position:absolute;
     bottom:65px;

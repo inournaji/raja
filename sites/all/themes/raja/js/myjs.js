@@ -239,5 +239,9 @@ jQuery(document).ready(function() {
 
     // change all selects first item text
     jQuery('select option:first-child').text('All')
-
+    if(jQuery('#block-block-8').length > 0) {
+        jQuery('#block-block-8').insertAfter('#edit-field-screen-size-value-wrapper')
+        jQuery('form#views-exposed-form-mobile-grid-block .views-exposed-widgets > div:not(:first-child), #block-block-8').wrapAll('<div class="panel panel-default"><div id="collapse1" class="panel-collapse collapse"></div></div>')
+        jQuery('<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a></h4></div>').insertAbefore('#collapse1');
+    }
 });
