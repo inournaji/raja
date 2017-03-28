@@ -786,7 +786,7 @@ div#collapse1>div {
 
 .mobile-grid .samsung-mobile:hover,
 .mobile-grid .samsung-mobile:focus{
-    box-shadow: 0 0 10px 1px #3b5999;
+    /*box-shadow: 0 0 10px 1px #3b5999;*/
 }
 .mobile-grid .samsung-mobile .mobile-name{
     background-color:#3b5999;
@@ -796,7 +796,7 @@ div#collapse1>div {
 
 .mobile-grid .sony-mobile:hover,
 .mobile-grid .sony-mobile:focus{
-    box-shadow: 0 0 10px 1px #131418;
+    /*box-shadow: 0 0 10px 1px #131418;*/
 }
 .mobile-grid .sony-mobile .mobile-name{
     background-color:#131418;
@@ -806,7 +806,7 @@ div#collapse1>div {
 
 .mobile-grid .htc-mobile:hover,
 .mobile-grid .htc-mobile:focus{
-    box-shadow: 0 0 10px 1px #09b83e;
+    /*box-shadow: 0 0 10px 1px #09b83e;*/
 }
 .mobile-grid .htc-mobile .mobile-name{
     background-color:#09b83e;
@@ -816,7 +816,7 @@ div#collapse1>div {
 
 .mobile-grid .apple-mobile:hover,
 .mobile-grid .apple-mobile:focus{
-    box-shadow: 0 0 10px 1px #2c3e50;
+    /*box-shadow: 0 0 10px 1px #2c3e50;*/
 }
 .mobile-grid .apple-mobile .mobile-name{
     background-color:#2c3e50;
@@ -1102,9 +1102,9 @@ body .view-empty p:last-child {}
 .view-id-warranty_check_ .view-content table {
     width: 550px;
     margin: 0 auto;
-    background-color: #fff; */
-box-shadow: 0 0 2px 2px #dadada;
-    background-color: #fff; */
+    background-color: #fff;
+/*box-shadow: 0 0 2px 2px #dadada;*/
+    /*background-color: #fff; *!*/
 box-shadow: 0 0 2px 2px #dadada;
 }
 .view-id-warranty_check_ .view-content{

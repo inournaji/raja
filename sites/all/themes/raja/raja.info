@@ -29,6 +29,8 @@ stylesheets[all][] = bootstrap/css/bootstrap.min.css
 stylesheets[all][] = css/slick.css
 stylesheets[all][] = css/slick-theme.css
 stylesheets[all][] = css/nouislider.min.css
+stylesheets[all][] = css/animate.css
+stylesheets[all][] = css/hover.css
 stylesheets[all][] = css/style.css
 
 
@@ -41,6 +43,7 @@ scripts[] = 'bootstrap/js/bootstrap.min.js'
 scripts[] = 'js/slick.min.js'
 scripts[] = 'js/nouislider.min.js'
 scripts[] = 'js/myjs.js'
+scripts[] = 'js/wow.js'
 ;scripts[] = 'bootstrap/js/affix.js'
 ;scripts[] = 'bootstrap/js/alert.js'
 ;scripts[] = 'bootstrap/js/button.js'
