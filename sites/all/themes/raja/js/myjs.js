@@ -235,7 +235,7 @@ jQuery(document).ready(function() {
         //update_mobile_colors();
         //update_accessories_color();
     });
-
+    new WOW().init();
 
     // change all selects first item text
     jQuery('select option:first-child').text('All')
