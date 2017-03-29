@@ -898,6 +898,11 @@ div#collapse1>div {
 .page-mobile .page-header {
     direction: ltr;
 }
+.view-mobile-page .field-slideshow-thumbnail img{
+    max-height: 70px !important;
+    height: auto;
+    width: auto;
+}
 .page-mobile img.field-slideshow-image.field-slideshow-image-1.img-responsive {
     margin: 0 auto;
 }
