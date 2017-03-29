@@ -506,8 +506,7 @@ body .label {
 }
 
 .raja .view-content > div:nth-child(4n-1):not(:last-child)  {
-    border-right: 1px solid rgba(228, 27, 35, 0.17);
-}
+    border-right: 1px solid rgba(228, 27, 35, 0.17); }
 section#block-locale-language h2.block-title {
     display: none;
 }
@@ -612,7 +611,7 @@ a.link-container {
 
 .raja .view-content > div .main-wrapper img.img-responsive {
     min-height: 250px;
-    background: #eee;
+    background: transparent;
     margin: 0 auto;
 }
 
