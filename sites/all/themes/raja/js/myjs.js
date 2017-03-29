@@ -244,4 +244,14 @@ jQuery(document).ready(function() {
         jQuery('form#views-exposed-form-mobile-grid-block .views-exposed-widgets > div:not(:first-child), #block-block-8').wrapAll('<div class="panel panel-default"><div id="collapse1" class="panel-collapse collapse"></div></div>')
         jQuery('<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">'+ Drupal.t('Advanced Search')+' </a></h4></div>').insertBefore('#collapse1');
     }
+    //colorful section in Home page
+    jQuery('.view.view-news .view-content .views-row').each(function(){
+        console.log(jQuery.trim(jQuery(this).find('.color').text()))
+        if(jQuery.trim(jQuery(this).find('.color').text()).length  > 0) {
+            jQuery(this).find('.title-container, .link').css('color',jQuery.trim(jQuery(this).find('.color').text()) )
+        }
+        if(jQuery.trim(jQuery(this).find('.back-color').text()).length  > 0) {
+            jQuery(this).find('.col-xs-12').css('background',jQuery.trim(jQuery(this).find('.back-color').text()) )
+        }
+    })
 });

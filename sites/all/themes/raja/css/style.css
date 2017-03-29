@@ -282,7 +282,7 @@ header#navbar.navbar-inverse a.name.navbar-brand {}
     color: #fff;
     padding-bottom: 41px;
     height: 73px;
-    padding: 28px 15px 0;
+    padding: 28px 13px 0;
     font-size: 18px;
 }
 
@@ -336,7 +336,67 @@ header nav ul.navbar-nav{
     /* background: #fff; */
     opacity: 0.6;
 }
+.view-news .col-xs-12, .view-news .col-sm-6 {
+    padding: 0;
+}
+.view.view-news .col-xs-12 {
+    margin-bottom: 50px;
+}
 
+.view.view-news .view-content .col-xs-12 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.view.view-news .view-content .views-row-even {}
+
+.view.view-news .view-content .views-row-even .col-sm-6.image-container {
+    order: 2;
+}
+
+.view.view-news .view-content .views-row .title-container {
+    color: #e41b23;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.view.view-news .view-content .views-row  .link a {
+    color: #211c5d;
+    font-weight: bold;
+}
+
+div#navbar-collapse {
+    float: right;
+}
+.col-sm-6.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100%; */
+    text-align: center;
+}
+
+.view-news .col-xs-12 {
+    display: flex;
+    align-items: center;
+}
+
+.view-news .link a {
+    color: #e41b23;
+}
+.view-news .link a:hover {
+    opacity: 0.8;
+}
+.view-news .views-row {
+    flex: 0 0 100%;
+}
+
+.view-news .view-content {
+    /* display: flex; */
+}
 .modal-body .field-slideshow-wrapper .field-slideshow {
     /* text-align: center; */
     margin: 0 auto;
@@ -458,6 +518,7 @@ h2.block-title ul li {
 
 #block-locale-language ul.language-switcher-locale-url {
     list-style-type: none;
+    padding-left: 0;
 }
 
 section#block-locale-language {
@@ -599,7 +660,7 @@ h2.block-title {
     max-width: 100%;
     /* display: flex; */
     /* justify-content: center; */
-     max-height: 456px;
+    max-height: 456px;
 }
 
 .front section.col-sm-12 {
@@ -717,7 +778,7 @@ section#block-views-mobile-grid-block {
 .mobile-grid .mobile{
     /*border-radius:5px;*/
     /*background-color: #fdfdfd;*/
-     /*margin-bottom: 10px; */
+    /*margin-bottom: 10px; */
     /*box-shadow: 0 0 10px 1px rgba(228, 27, 35, 0.21);*/
     /*transition: all 0.2s ease-in-out;*/
 }
@@ -1104,9 +1165,9 @@ body .view-empty p:last-child {}
     width: 550px;
     margin: 0 auto;
     background-color: #fff;
-/*box-shadow: 0 0 2px 2px #dadada;*/
+    /*box-shadow: 0 0 2px 2px #dadada;*/
     /*background-color: #fff; *!*/
-box-shadow: 0 0 2px 2px #dadada;
+    box-shadow: 0 0 2px 2px #dadada;
 }
 .view-id-warranty_check_ .view-content{
     display: block;
