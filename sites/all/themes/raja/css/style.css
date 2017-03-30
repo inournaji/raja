@@ -506,7 +506,9 @@ body .label {
 }
 
 .raja .view-content > div:nth-child(4n-1):not(:last-child)  {
-    border-right: 1px solid rgba(228, 27, 35, 0.17); }
+    border-right: 1px solid rgba(228, 27, 35, 0.17);
+    border-right: none;
+}
 section#block-locale-language h2.block-title {
     display: none;
 }
@@ -643,6 +645,9 @@ h2.block-title {
 .raja .view-content > div:nth-child(4n-2):not(:last-child)  {
     border-left: 1px solid rgba(228, 27, 35, 0.17);
     border-right: 1px solid rgba(228, 27, 35, 0.17);
+    border-right: none;
+    border-left: none;
+
 }
 .raja .view-content > div {
     margin-bottom: 20px;
