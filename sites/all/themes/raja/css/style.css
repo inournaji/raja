@@ -559,6 +559,19 @@ a.link-container {
     width: 100%;
     z-index: 1;
 }
+
+.view.view-mobile-page span.field-content .row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.view.view-mobile-page span.field-content .row > .col-md-6:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .sold .image-container:before {
     content: ' ';
     position: absolute;
