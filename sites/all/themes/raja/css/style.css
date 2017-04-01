@@ -506,7 +506,8 @@ body .label {
 }
 
 .raja .view-content > div:nth-child(4n-1):not(:last-child)  {
-    border-right: 1px solid #e41b23;
+    border-right: 1px solid rgba(228, 27, 35, 0.17);
+    border-right: none;
 }
 section#block-locale-language h2.block-title {
     display: none;
@@ -666,6 +667,9 @@ h2.block-title {
 .raja .view-content > div:nth-child(4n-2):not(:last-child)  {
     border-left: 1px solid rgba(228, 27, 35, 0.17);
     border-right: 1px solid rgba(228, 27, 35, 0.17);
+    border-right: none;
+    border-left: none;
+
 }
 .raja .view-content > div {
     margin-bottom: 20px;
@@ -773,6 +777,7 @@ section#block-block-8 {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    flex: 0 0 100%;
 }
 div#edit-field-ram-value-wrapper, div#edit-field-price-value-wrapper, div#edit-field-screen-size-value-wrapper {
     display: none;
@@ -832,6 +837,9 @@ section#block-views-mobile-grid-block {
 div#collapse1 {
     overflow: hidden;
     /* padding: 15px 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 form#views-exposed-form-mobile-grid-block .panel-default>.panel-heading {
@@ -849,6 +857,7 @@ form#views-exposed-form-mobile-grid-block .panel-default>.panel-heading h4.panel
 
 div#collapse1>div {
     margin-top: 20px;
+    flex: 0 0 31%;
 }
 .mobile-grid .mobile .mobile-price{
     position:absolute;
@@ -1045,6 +1054,24 @@ div#collapse1>div {
 
 /* END SINGLE MOBILE PAGE */
 /* Company Branches */
+.view.view-branches- tr td {
+    padding: 19px 10px;
+    position: relative;
+}
+
+.view.view-branches- span.image {
+    float: right;
+    position: absolute;
+    right: 42px;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    padding: 1%;
+}
+
+.view.view-branches- span.title {
+    padding-right: 50%;
+}
 .image img.img-responsive {
     display: inline-block;
     width: 75px;
