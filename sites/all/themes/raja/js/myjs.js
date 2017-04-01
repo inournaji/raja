@@ -229,9 +229,13 @@ jQuery(document).ready(function() {
 
   /* END MOBILE RANGE SLIDER */
 //    Warranty page
+    jQuery('.views-exposed-form .form-control').change(function() {
+        jQuery(".spinner").fadeIn("slow");
+    });
 
     jQuery(document).ajaxSuccess(function() {
         jQuery( "body" ).addClass('submit');
+        jQuery(".spinner").fadeOut("slow");
         //update_mobile_colors();
         //update_accessories_color();
     });
