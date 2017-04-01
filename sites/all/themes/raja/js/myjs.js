@@ -232,7 +232,6 @@ jQuery(document).ready(function() {
     jQuery('.views-exposed-form .form-control').change(function() {
         jQuery(".spinner").fadeIn("slow");
     });
-
     jQuery(document).ajaxSuccess(function() {
         jQuery( "body" ).addClass('submit');
         jQuery(".spinner").fadeOut("slow");
