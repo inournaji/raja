@@ -112,7 +112,7 @@ select#edit-field-color-tid {}
 }
 
 .views-exposed-form div#edit-combine-wrapper label {
-    /*order: 2;*/
+    order: 2;
     margin-left: 10px;
 }
 
@@ -489,18 +489,14 @@ form#views-exposed-form-mobile-accessories-page-4 label {
 }
 
 form#views-exposed-form-mobile-accessories-page-4 .views-widget {
-     flex: 0 0 50%;
+    /* flex: 0 0 auto; */
 }
 
 .views-exposed-form div#edit-combine-wrapper .views-widget input#edit-combine {
     width: 100%;
 }
 /* HOME PAGE BIG SLIDER */
-.navbar-nav>li.last.leaf a {
-    font-size: 1px;
-    color: transparent;
-    background: url(../images/search.svg) no-repeat center center;
-}
+
 .view-app-home .views-row {
     display: flex;
     align-items: stretch;
