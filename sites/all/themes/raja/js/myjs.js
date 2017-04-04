@@ -100,7 +100,7 @@ jQuery(document).ready(function() {
 
   /* MOBILE RANGE SLIDER */
 
-    if (location.pathname.split("/")[1] == "mobiles"){
+    if (jQuery('page-node-91').length > 0){
 
       /* RAM */
 

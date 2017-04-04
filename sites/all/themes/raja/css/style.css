@@ -112,7 +112,7 @@ select#edit-field-color-tid {}
 }
 
 .views-exposed-form div#edit-combine-wrapper label {
-    order: 2;
+    /*order: 2;*/
     margin-left: 10px;
 }
 
@@ -259,7 +259,7 @@ header#navbar.navbar-inverse {
 }
 
 header#navbar.navbar-inverse a.active, header#navbar.navbar-inverse a:hover {
-    background: #fafafa;
+    background-color: #fafafa;
     color: #e41b23;
     border-bottom: 5px solid #fafafa;
 }
@@ -489,14 +489,20 @@ form#views-exposed-form-mobile-accessories-page-4 label {
 }
 
 form#views-exposed-form-mobile-accessories-page-4 .views-widget {
-    /* flex: 0 0 auto; */
+    flex: 0 0 50%;
 }
 
 .views-exposed-form div#edit-combine-wrapper .views-widget input#edit-combine {
     width: 100%;
 }
 /* HOME PAGE BIG SLIDER */
-
+.navbar-nav>li.last.leaf a {
+    font-size: 1px;
+    color: transparent;
+    background: url(../images/search.svg) no-repeat center center;
+    width: 50px;
+    background-size: 20px;
+}
 .view-app-home .views-row {
     display: flex;
     align-items: stretch;
