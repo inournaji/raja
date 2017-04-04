@@ -401,6 +401,7 @@ div#navbar-collapse {
     /* text-align: center; */
     margin: 0 auto;
     box-shadow: 0 0 2px 2px #eee;
+    width: 100%;
 }
 
 .modal-body li {
@@ -482,7 +483,18 @@ body .label {
 /*.region-content{*/
 /*min-height:1000px;*/
 /*}*/
+/* Search page */
+form#views-exposed-form-mobile-accessories-page-4 label {
+    flex: 0 0 auto;
+}
 
+form#views-exposed-form-mobile-accessories-page-4 .views-widget {
+    /* flex: 0 0 auto; */
+}
+
+.views-exposed-form div#edit-combine-wrapper .views-widget input#edit-combine {
+    width: 100%;
+}
 /* HOME PAGE BIG SLIDER */
 
 .view-app-home .views-row {
