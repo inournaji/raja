@@ -24,20 +24,24 @@ html, body{
     /* display: inline-block; */
     padding-bottom: 15px;
     color: rgb(34, 29, 95);
-    font-size: 50px;
+    font-size: 28px;
     /* background-color: rgb(51, 51, 51); */
-    text-shadow: rgb(255, 255, 255) 0px -1px 4px, rgba(255, 255, 0, 0.15) 0px -2px 10px, rgba(255, 128, 0, 0.2) 0px -10px 20px, rgba(255, 0, 0, 0.25) 0px 0px 35px;
+    /*text-shadow: rgb(255, 255, 255) 0px -1px 4px, rgba(255, 255, 0, 0.15) 0px -2px 10px, rgba(255, 128, 0, 0.2) 0px -10px 20px, rgba(255, 0, 0, 0.25) 0px 0px 35px;*/
     direction: rtl;
 }
 
 /* nav logo */
 
 .logo img{
-    height: 50px;
+    height: 60px;
+    /* position: absolute; */
+    /* top: 0px; */
 }
 .navbar-header .logo{
     margin-left: 35px;
-    margin-top: 15px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    position: relative;
 }
 
 .view-empty {
@@ -281,8 +285,8 @@ header#navbar.navbar-inverse a.name.navbar-brand {}
     border-bottom: 3px solid transparent;
     color: #fff;
     padding-bottom: 41px;
-    height: 73px;
-    padding: 28px 13px 0;
+    height: 55px;
+    padding: 16px 13px 0;
     font-size: 18px;
 }
 
@@ -308,7 +312,7 @@ header nav ul.navbar-nav{
 
     header#navbar.navbar-inverse nav {
         float: left;
-        /* height: 100%; */
+        height: 55px;
         margin-left: 45px;
     }
 
@@ -393,7 +397,9 @@ div#navbar-collapse {
 .view-news .views-row {
     flex: 0 0 100%;
 }
-
+[dir="rtl"] form#views-exposed-form-mobile-grid-block .panel-default {
+    direction: ltr;
+}
 .view-news .view-content {
     /* display: flex; */
 }
@@ -549,7 +555,7 @@ section#block-locale-language {
     background: #fafafa;
     color: #000;
     padding: 5px 10px;
-    margin-top: 11px;
+    margin-top: -5px;
     display: block;
 }
 
@@ -1416,7 +1422,12 @@ body .view-empty p:last-child {}
 /* END FOOTER */
 
 @media (min-width: 1170px) {
-    .navbar-header:after {content: ' ';position: absolute;top: 0;left: 0;width: 110%;height: 100%;display: block;transform: skew(20deg) rotate(0deg);border-top-right-radius: 0;border-bottom-left-radius: 0;background: #fafafa;z-index: 0;}
+    .logo img {
+        height: 60px;
+        position: absolute;
+        top: 0px;
+    }
+    .navbar-header:after {content: ' ';position: absolute;top: 0;left: 0;width: 110%;height: 100%;display: block;transform: skew(20deg) rotate(0deg);border-top-right-radius: 0;border-bottom-left-radius: 0;background: #fafafa;z-index: 0;width: 196px;height: 55px;}
     .navbar-header:before {content: ' ';position: absolute;top: 0;left: -13px;width: 119%;height: 100%;display: block;transform: skew(48deg) rotate(17deg);border-top-right-radius: 10px;border-bottom-left-radius: 10px;background: #fafafa;z-index: 0;display: none;}
 
     .navbar-header {
