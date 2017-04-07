@@ -66,7 +66,7 @@ jQuery(document).ready(function() {
     //        }
     //    ]
     //});
-
+    var isRTL = jQuery('body').css('direction') == 'rtl';
     jQuery(big_slider).slick({
         fade: true,
         cssEase: 'linear',
@@ -75,7 +75,8 @@ jQuery(document).ready(function() {
         slidesToShow: 1,
         autoplay: true,
         arrows: false,
-        dots: true
+        dots: true,
+        rtl: isRTL
     });
 
 
@@ -100,7 +101,7 @@ jQuery(document).ready(function() {
 
   /* MOBILE RANGE SLIDER */
 
-    if (jQuery('page-node-91').length > 0){
+    if (jQuery('.page-node-91').length > 0){
 
       /* RAM */
 
