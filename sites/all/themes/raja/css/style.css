@@ -1,16 +1,41 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('fonts/CenturyGothic.eot');
+    src: url('fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CenturyGothic.woff') format('woff'),
+    url('fonts/CenturyGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hacen Saudi Arabia';
+    src: url('fonts/HacenSaudiArabia.eot');
+    src: url('fonts/HacenSaudiArabia.eot?#iefix') format('embedded-opentype'),
+    url('fonts/HacenSaudiArabia.woff') format('woff'),
+    url('fonts/HacenSaudiArabia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, body{
-    font-family: 'Ubuntu', sans-serif !important;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #FAFAFA;
     font-size: 16px;
-}
 
+}
+body {
+    font-family: 'Century Gothic', sans-serif !important;
+}
+body[dir="rtl"] {
+    font-family: 'Hacen Saudi Arabia', sans-serif !important;
+}
 .page-header {
     /* padding-bottom: 9px; */
     margin: 40px 0 20px;
@@ -1420,12 +1445,12 @@ body .view-empty p:last-child {}
 }
 
 /* END FOOTER */
-
 @media (min-width: 1170px) {
     .logo img {
         height: 60px;
         position: absolute;
         top: 0px;
+        left: -6px;
     }
     .navbar-header:after {content: ' ';position: absolute;top: 0;left: 0;width: 110%;height: 100%;display: block;transform: skew(20deg) rotate(0deg);border-top-right-radius: 0;border-bottom-left-radius: 0;background: #fafafa;z-index: 0;width: 196px;height: 55px;}
     .navbar-header:before {content: ' ';position: absolute;top: 0;left: -13px;width: 119%;height: 100%;display: block;transform: skew(48deg) rotate(17deg);border-top-right-radius: 10px;border-bottom-left-radius: 10px;background: #fafafa;z-index: 0;display: none;}
