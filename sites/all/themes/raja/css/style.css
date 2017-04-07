@@ -33,7 +33,7 @@ html, body{
 body {
     font-family: 'Century Gothic', sans-serif !important;
 }
-body[dir="rtl"] {
+body.i18n-ar {
     font-family: 'Hacen Saudi Arabia', sans-serif !important;
 }
 .page-header {
