@@ -245,7 +245,7 @@ jQuery(document).ready(function() {
 
   /* END MOBILE RANGE SLIDER */
 //    Warranty page
-    jQuery('.views-exposed-form .form-control').change(function() {
+    jQuery('.views-exposed-form .form-control:not(#edit-combine)').change(function() {
         jQuery(".spinner").fadeIn("slow");
     });
     jQuery(document).ajaxSuccess(function() {
