@@ -21,6 +21,21 @@ function update_accessories_color() {
     }
 }
 jQuery(document).ready(function() {
+    //    search filters
+    jQuery('#edit-submit-mobile-accessories').click(function() {
+
+        var values = [];
+        jQuery('select#edit-tid option').each(function() {
+            console.log(jQuery(this).text())
+            if(jQuery(this).text().toLocaleLowerCase().indexOf(jQuery('input#edit-combine').val()) > -1) {
+                console.log('true')
+                values.push(jQuery(this).attr('value'))
+            }
+        });
+        jQuery('select#edit-tid').val(values);
+        jQuery('select#edit-tid').trigger('change');
+
+    })
     //update_mobile_colors();
     //update_accessories_color();
   /* LOADER */
@@ -258,20 +273,7 @@ jQuery(document).ready(function() {
             jQuery(this).find('.col-xs-12').css('background',jQuery.trim(jQuery(this).find('.back-color').text()) )
         }
     });
-//    search filters
-    jQuery('#edit-submit-mobile-accessories').click(function() {
 
-        var values = [];
-        jQuery('select#edit-tid option').each(function() {
-            console.log(jQuery(this).text())
-            if(jQuery(this).text().toLocaleLowerCase().indexOf(jQuery('input#edit-combine').val()) > -1) {
-                console.log('true')
-                values.push(jQuery(this).attr('value'))
-            }
-        });
-        jQuery('select#edit-tid').val(values)
-
-    })
 
 
 });
