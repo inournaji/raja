@@ -52,7 +52,7 @@ body.i18n-ar {
     font-size: 28px;
     /* background-color: rgb(51, 51, 51); */
     /*text-shadow: rgb(255, 255, 255) 0px -1px 4px, rgba(255, 255, 0, 0.15) 0px -2px 10px, rgba(255, 128, 0, 0.2) 0px -10px 20px, rgba(255, 0, 0, 0.25) 0px 0px 35px;*/
-    direction: rtl;
+    /*direction: rtl;*/
 }
 
 /* nav logo */
@@ -150,28 +150,49 @@ select#edit-field-color-tid {}
 }
 
 section#block-block-8 > div > div > span {
-    float: right;
-    margin-left: 8px;
+    float: left;
+    /* margin-left: 8px; */
+    width: 100px;
+    display: block;
+    text-align: center;
 }
+body.i18n-ar section#block-block-8 > div > div > span {
+    float: right;
+}
+section#block-block-8 > div > div >div {
+    margin-left: 124px;
+}
+body.i18n-ar section#block-block-8 > div > div >div {
+    margin-left: 0;
+    margin-right: 124px
+}
+
 body.i18n-ar .views-exposed-form .views-exposed-widget label, body.i18n-ar section#block-block-8 > div > div > span {
-    font-size: 14px;
+    font-size: 16px;
 }
 .views-exposed-form .views-exposed-widget label, section#block-block-8 > div > div > span{
-    padding: 4px 12px 5px 12px;
+    padding: 4px 10px 5px 10px;
     font-size: 18px;
     color: #fff;
     background-color: #CE181F;
 }
+body.i18n-ar .views-exposed-form .views-exposed-widget .views-widget{
+    display: inline-block;
+    margin-right: 5px;
+    /* float: left; */
+    margin-left: 9px;
+}
 .views-exposed-form .views-exposed-widget .views-widget{
     display: inline-block;
-    margin-left: 20px;
-    float: left;
+    margin-left: 5px;
+    /* float: left; */
+    margin-right: 20px;
 }
 .views-exposed-form {
     margin-top: 15px;
 }
 .views-exposed-form{
-    text-align: right;
+    /*text-align: right;*/
 }
 
 .views-exposed-form .form-control {
@@ -181,11 +202,11 @@ body.i18n-ar .views-exposed-form .views-exposed-widget label, body.i18n-ar secti
     outline: 0;
     box-shadow: none;
     border-radius: 0;
-    width: 250px;
+    width: 200px;
     font-size: 16px;
     padding-left: 0;
     margin-bottom: 15px;
-    transition: all 0.2s linear
+    transition: all 0.2s linear;
 }
 
 .views-exposed-form .views-widget {
@@ -426,7 +447,7 @@ div#navbar-collapse {
     flex: 0 0 100%;
 }
 [dir="rtl"] form#views-exposed-form-mobile-grid-block .panel-default {
-    direction: ltr;
+    /*     direction: ltr; */
 }
 .view-news .view-content {
     /* display: flex; */
@@ -699,7 +720,25 @@ a.link-container {
     position: relative;
     overflow: hidden;
 }
+div#edit-field-company-tid-wrapper {}
 
+body.i18n-ar div#edit-field-company-tid-wrapper label {
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div#edit-field-company-tid-wrapper .views-widget {
+    /* width: 208px; */
+}
+
+body.i18n-ar div#edit-field-company-tid-wrapper .views-widget select#edit-field-company-tid {
+    width: 200px;
+}
+body.i18n-ar .sold .image-container:after {
+    content: 'تخفيض';
+    top: 5px;
+}
 .sold .image-container:after {
     content: ' Sold';
     position: absolute;
@@ -1178,9 +1217,27 @@ div#collapse1>div {
     width: 50%;
     padding: 1%;
 }
-
+body.page-branches:not(.i18n-ar) .view.view-branches- span.image {
+    float: left;
+    position: absolute;
+    left: 42px;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    right: auto
+}
+body.page-branches:not(.i18n-ar) .views-exposed-form .views-exposed-widget{
+    direction: ltr;
+}
+.page-branches:not(.i18n-ar) .view.view-branches- span.title {
+    padding-left: 106px;
+    padding-right: 0;
+}
+.page-branches:not(.i18n-ar) table {
+    direction: ltr;
+}
 .view.view-branches- span.title {
-    padding-right: 50%;
+    padding-right: 100px;
 }
 .image img.img-responsive {
     display: inline-block;
@@ -1247,11 +1304,11 @@ div#collapse1>div {
     opacity: 0.8;
     font-size: 16px;
 }
-.view.view-branches- .views-field.views-field-nothing {
+.view.view-branches-:not(.i18n-ar) .views-field.views-field-nothing {
     direction: ltr;
 }
-.page-branches h1.page-header {
-    direction: rtl;
+.page-branches:not(.i18n-ar) h1.page-header {
+    direction: ltr;
 }
 
 .view.view-branches- .views-row p {
@@ -1298,7 +1355,7 @@ body .view-empty p:last-child {}
     background: #ddd;
 }
 .page-warranty h1.page-header {
-    text-align: right;
+    /*text-align: right;*/
 }
 .waranty-wrapper {
     margin: 20px 0;
@@ -1326,7 +1383,7 @@ body .view-empty p:last-child {}
     margin-bottom: 53px;
     float: left;
     width: 100%;
-    direction: rtl;
+    /*direction: rtl;*/
 }
 .view-id-warranty_check_ .view-content table {
     width: 550px;
