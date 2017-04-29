@@ -301,9 +301,9 @@ section#block-block-8 > div {
 }
 /* Header */
 header#navbar.navbar-inverse {
-    background: #e41b23;
+    background: #fff;
     border: none;
-    color: #fff;
+    color: #e41b23;
     /* margin: 0 calc((100% - 1170px) / -2); */
     width: 100%;
     border-radius: 0;
