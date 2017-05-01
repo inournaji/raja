@@ -12,6 +12,7 @@ function raja_views_pre_view(&$view) {
 
 
             $filters = $view->display_handler->get_option('filters');
+            $_SESSION['filters'] = $filters;
 //            foreach ($exposed_filters as $key => $valor) {
 //                $filters[$key]['value'] = $valor;
 //                $view->display_handler->set_option('filters', $filters);
