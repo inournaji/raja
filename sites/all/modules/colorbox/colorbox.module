@@ -513,6 +513,23 @@ function colorbox_insert_content($item, $style, $widget) {
   return theme(array('colorbox_insert_image__' . str_replace('-', '_', $item['style_name']), 'colorbox_insert_image'), array('item' => $item, 'widget' => $widget));
 }
 
+function colorbox_views_pre_view(&$view) {
+//  if ($view->name == 'warranty_api' && $view->current_display == 'services_2') {
+
+
+
+
+    $filters = $view->display_handler->get_option('filters');
+    $_SESSION['filters'] = $filters;
+//            foreach ($exposed_filters as $key => $valor) {
+//                $filters[$key]['value'] = $valor;
+//                $view->display_handler->set_option('filters', $filters);
+//                $view->display_handler->override_option('filters', $filters);
+//            }
+
+
+//  }
+}
 /**
  * Machine names normally need to be unique but that does not apply to galleries.
  *
@@ -522,3 +539,4 @@ function colorbox_insert_content($item, $style, $widget) {
 function colorbox_gallery_exists() {
   return FALSE;
 }
+
