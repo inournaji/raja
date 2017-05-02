@@ -1,0 +1,278 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ *
+ * @see: https://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_menu/7 (function hook_menu)
+ * @see: https://drupalize.me/blog/201502/write-hello-world-test-drupal-7-simpletest
+ *
+ */
+
+function raja_menu() {
+
+    $items = array();
+
+    // "page arguments"
+    // If an integer is used as an argument it will represent a part of the URL, starting from 0, incremented once for each slash (/). 
+    // https://drupal.stackexchange.com/questions/62473/how-should-i-implement-hook-menu
+
+    $items['raja'] = array(
+        'title' => 'Hello World',
+        'access callback' => TRUE,
+        'page callback' => 'raja_page',
+        'type' => MENU_NORMAL_ITEM,
+        'menu' => 'navigation',
+    );
+
+    $items['raja/%'] = array(
+        'title' => 'Hello World',
+        'access callback' => TRUE,
+        'page callback' => 'raja_page_id',
+        'page arguments' => array(1),
+        'type' => MENU_NORMAL_ITEM,
+    );
+
+    $items['rest/raja'] = array(
+      'access callback' => TRUE,
+      'page callback' => 'raja_rest',
+      'page arguments' => array(1),
+      'type' => MENU_CALLBACK,
+    );
+
+    $items['rest/raja/%'] = array(
+      'access callback' => TRUE,
+      'page callback' => 'raja_rest_id',
+      'page arguments' => array(2),
+      'type' => MENU_CALLBACK,
+    );
+    $items['get-imei'] = array(
+        'access callback' => TRUE,
+        'page callback' => 'get_imei',
+        'page arguments' => array(2),
+        'type' => MENU_CALLBACK,
+    );
+
+    return $items;
+}
+
+function raja_debug($msg){
+    if(false) {
+        echo "<script>console.log('" . $msg . "')</script>";
+    }
+}
+
+/*
+ * @see: https://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_permission/7
+ * @see: https://www.drupal.org/node/1803614
+ * @see: https://www.drupal.org/node/120614
+ * @see: http://websmiths.co/blog/very-quick-introduction-drupals-hookpermission-and-hookperm
+ */
+function raja_permission() {
+
+    raja_debug("raja_permission");
+
+    return array(
+        'hello world add' => array(
+            'title' => t('Add an item to hello world module'),
+        ),
+        'hello world delete' => array(
+            'title' => t('Delete an item from the hello world module')
+        )
+    );
+}
+
+/*
+ **************************************************************************
+ * RESTFUL INTERFACES
+ **************************************************************************
+ */
+
+// TODO: Set correct header
+function raja_rest_id($id) {
+
+    //drupal_add_http_header('Content-Type', 'application/json; charset=utf-8');
+    $method = $_SERVER['REQUEST_METHOD'];
+
+    if($method == "GET") {
+        echo "GET ID " . $id;
+    }
+
+    if($method == "DELETE") {
+        if(user_access("hello world delete")) {
+            // @see: https://www.drupal.org/node/180589
+            $return_value = db_delete('raja')
+                ->condition('id', $id)
+                ->execute();
+            if($return_value) {
+                echo t("Deleted ID $id");
+            } else {
+                echo t("ID $id does not exists: " . $return_value);
+            }
+        } else {
+            echo "No permissions to delete this element.";
+        }
+    }
+
+}
+
+function raja_rest($link) {
+
+    $method = $_SERVER['REQUEST_METHOD'];
+
+    // php://input gives you everything after the headers in raw form
+    // $raw_post = file_get_contents('php://input');
+    // echo $raw_post;
+
+    if(user_access("hello world add")) {
+        if($method == "POST") {
+            if($_POST['title'] && $_POST['text']) {
+                // @see: https://www.drupal.org/node/310079 (Insert queries)
+                // @see: https://api.drupal.org/api/drupal/includes!database!database.inc/function/db_insert/7 (function db_insert)
+                // @see: https://www.drupal.org/node/310072 (Static queries)
+                $nid = db_insert('raja') // Table name no longer needs {}
+                    ->fields(array(
+                        'title' => $_POST['title'],
+                        'text' => $_POST['text'],
+                        'timestamp' => time()
+                    ))
+                    ->execute();
+
+                drupal_add_http_header('Content-Type', 'application/json; charset=utf-8');
+
+                $arr = array(
+                    'id' => $nid,
+                );
+                echo json_encode($arr);
+            }
+        }
+    }
+}
+
+/*
+ **************************************************************************
+ * USUAL DRUPAL PAGES
+ **************************************************************************
+ */
+
+function raja_page_id($id) {
+
+    //####################//
+    //### HEADER START ###//
+    //####################//
+    // This should be moved to a more fitting place
+
+    $p = drupal_get_path('module', 'raja');
+
+    drupal_add_css('http://fonts.googleapis.com/css?family=Indie+Flower', array('group' => CSS_THEME, 'type' => 'external'));
+    drupal_add_css($p . '/css/raja.css');
+    drupal_add_js($p . '/js/raja.js');
+
+    //####################//
+    //### HEADER END   ###//
+    //####################//
+
+    $result = db_select("raja", "h")
+        ->condition('id', $id, '=')
+        ->fields('h')
+        ->execute();
+    $out = '<div class="raja">';
+
+    if($result->rowCount()) {
+        $record = $result->fetchObject();
+        $out .= getEntry($record);
+    } else {
+        $out .= '<h2 class="error">Entry with ID #' . $id . ' not found!</h2>';
+    }
+
+    $out .= "</div>";
+    return $out;
+}
+
+function raja_page() {
+
+    //####################//
+    //### HEADER START ###//
+    //####################//
+    // This should be moved to a more fitting place
+
+    raja_debug("raja_page");
+
+    $p = drupal_get_path('module', 'raja');
+
+    drupal_add_css('http://fonts.googleapis.com/css?family=Indie+Flower', array('group' => CSS_THEME, 'type' => 'external'));
+    drupal_add_css($p . '/css/raja.css');
+    drupal_add_js($p . '/js/raja.js');
+
+
+    // Define some default permissions
+    // @see: https://api.drupal.org/api/drupal/modules!user!user.module/function/user_role_load_by_name/7
+    // @see: https://api.drupal.org/api/drupal/modules%21user%21user.module/function/user_role_grant_permissions/7
+    $role1 = user_role_load_by_name("authenticated user");
+    user_role_grant_permissions($role1->rid, array('hello world add'));
+
+    $role2 = user_role_load_by_name("administrator");
+    user_role_grant_permissions($role2->rid, array('hello world delete'));
+
+    $out = '<div class="raja">';
+
+    //####################//
+    //### HEADER END   ###//
+    //####################//
+
+
+    // Create a simple form
+    // This function has been added in 7.36:
+    // @see: https://api.drupal.org/api/drupal/modules!user!user.module/function/user_has_role/7
+
+    if(user_access("hello world add")) {
+        $out .= 
+                t('Title') . ': <input type="text" id="raja-title" name="title"><br>' .
+                t('Text') .  ': <input type="text" id="raja-text"  name="text"><br>' .
+                '<button class="raja-create" type="submit" name="submit">Send</button>';
+    }
+
+    // Get all data from the database
+    // @see: https://api.drupal.org/api/drupal/includes!database!database.inc/function/db_query/7 (function db_query)
+    // @see: https://www.drupal.org/writing-secure-code
+    $result = db_select("raja", "h")
+        ->fields('h')
+        ->orderBy('id', 'DESC')//ORDER BY created
+        ->execute();
+
+    while($record = $result->fetchObject()) {
+        $out .= getEntry($record);
+    }
+
+    return $out . '</div>';
+}
+
+// Helper function
+function getEntry($record){
+    $out = t('<div id="raja-context-!id">', array(
+        '!id' => $record->id
+    ));
+    $out .= t('<h2><a href="!url">#!id - !title</a></h2><p>Date: !date</p><p>!text</p>', array(
+        '!id' => $record->id,
+        '!title' => $record->title,
+        '!date' => date("Y-m-d H:i:s", $record->timestamp),
+        '!text' => $record->text,
+        '!url' => url("raja/" . $record->id)
+    ));
+
+    // @see: https://api.drupal.org/api/drupal/includes!bootstrap.inc/function/t/7 (function t)
+    // @see: https://www.drupal.org/node/1844980 (Why use t() function?)
+    // @see: https://www.drupal.org/node/322774 (Dynamic or static links and HTML in translatable strings)
+    if(user_access("hello world delete")) {
+        $out .= t('<button class="raja-delete" data-id="!id">DELETE</button>', array(
+            '!id' => $record->id
+        ));
+    }
+
+    $out .= '</div>';
+    return $out;
+}
+
+
+function get_imei() {
+    return 'test';
+}

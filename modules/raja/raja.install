@@ -1,0 +1,89 @@
+<?php
+
+/*
+ * Implements hook_schema().
+ *
+ * @see: https://www.drupal.org/node/876250 (Writing .install files (Drupal 7.x))
+ * @see: https://www.drupal.org/node/146843 (Schema API)
+ * @see: https://www.drupal.org/node/159605 (Data types)
+ * @see: https://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_schema/7 (function hook_schema)
+ *
+ */
+
+function raja_schema() {
+
+    $schema ['raja'] = array(
+        'fields' => array(
+            'id' => array(
+                /* serial and int are the same internal column types, 
+                 * but serial is also set to be auto-increment, whereas int is not. */
+                'type' => 'serial', 
+                'unsigned' => TRUE,
+                'not null' => TRUE
+            ),
+            'title' => array(
+                'type' => 'varchar',
+                'length' => 250,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'text' => array(
+                'type' => 'varchar',
+                'length' => 250,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'timestamp' => array(
+                'type' => 'int',
+                'length' => 20,
+                'not null' => FALSE,
+            ),
+        ),
+        'primary key' => array('id')
+    );
+
+    return $schema;
+}
+
+//function raja_install() {
+    // Set an initial value for the schema version so we can run updates after install.
+    // http://www.deliciouscreative.com/blog/run-drupal-updates-directly-after-enabling-deployment-module
+    // drupal_set_installed_schema_version('raja', 7000);
+
+    // Run all update hooks
+    // http://dcycleproject.org/blog/43/run-all-update-hooks-install-hook
+//    for ($i = 7001; $i < 8000; $i++) {
+//        $candidate = 'raja_update_' . $i;
+//        if (function_exists($candidate)) {
+//            $candidate();
+//        }
+//    }
+//}
+
+// Updates:
+// @see https://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_update_N/7
+
+/**
+ * Add an additional time column to the hello world table
+ */
+/*
+function raja_update_7001() {
+    // @see: @see: https://www.drupal.org/node/150215
+    $spec = array(
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => FALSE,
+    ); 
+    db_add_field( 'raja', 'timestamp', $spec);
+
+    $time = time();
+
+    db_update('raja')
+        ->fields(array(
+            'timestamp' => $time
+        ))
+        ->execute();
+}
+*/
+
+?>
