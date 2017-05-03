@@ -18,8 +18,12 @@
 
 function RAJATEC_menu(){
 	$items['testie'] = array(
-		'page callback' => 'testie_my_page',
-		'access arguments' => array('access content'),
+//		'title' => 'Example AJAX add to list',
+		'page callback' => 'check_imei',
+		'page_arguments' => array(1, 3),
+		'access callback' => 'example_access_ajax_add',
+		'access arguments' => array(3, 4),
+		'type' => MENU_CALLBACK,
 	);
 	return $items;
 }
@@ -30,6 +34,7 @@ function RAJATEC_menu(){
 /* this code (noted in the callback above) creates the
  * contents of the "testie" page */
  
-function testie_my_page(){
-	return "<p>This is my testie demo page.</p>";
+function check_imei(){
+
+	return json_encode('test');
 }
