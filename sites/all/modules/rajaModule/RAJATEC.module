@@ -19,10 +19,9 @@
 function RAJATEC_menu(){
 	$items['testie'] = array(
 //		'title' => 'Example AJAX add to list',
+		'title' => 'Get Current User Name',
 		'page callback' => 'check_imei',
-		'page_arguments' => array(1, 3),
-		'access callback' => 'example_access_ajax_add',
-		'access arguments' => array(3, 4),
+		'access arguments' => array('access content'),
 		'type' => MENU_CALLBACK,
 	);
 	return $items;
