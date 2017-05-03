@@ -32,8 +32,17 @@ function RAJATEC_menu(){
 
 /* this code (noted in the callback above) creates the
  * contents of the "testie" page */
- 
+
 function check_imei(){
+	$imei = $_POST['imei'];
+	$services_2 = views_get_view("warranty_api", true);
+	$services_2->set_display("services_2");
+	$services_2->set_exposed_input(array(
+		'field_imei_2_value'=>$imei,
+		'field_device_imei_number_value'=> $imei
+	));
+	$services_2->execute();
+//	$view->result = array_merge($view->result, $services_2->result);
 	header('Content-Type: application/json');
-	return json_encode('test');
+	return json_encode($services_2->result);
 }
