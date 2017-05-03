@@ -34,6 +34,6 @@ function RAJATEC_menu(){
  * contents of the "testie" page */
  
 function check_imei(){
-
+	header('Content-Type: application/json');
 	return json_encode('test');
 }
