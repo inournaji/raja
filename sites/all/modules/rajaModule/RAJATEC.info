@@ -1,4 +1,4 @@
-name = RAJA
+name = RAJATEC
 description = "Rick's testie module - a very simple module demo"
 core = 7.x
 files[] = testie.module

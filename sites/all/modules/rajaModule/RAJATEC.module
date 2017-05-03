@@ -16,7 +16,7 @@
 
 /* the menu hook - adds the path "/testie" to the site. */
 
-function RAJA_menu(){
+function RAJATEC_menu(){
 	$items['testie'] = array(
 		'page callback' => 'testie_my_page',
 		'access arguments' => array('access content'),
